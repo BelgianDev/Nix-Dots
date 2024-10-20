@@ -38,6 +38,8 @@
     alacritty
     vesktop
 
+    vscode
+
     spotify
   ];
 
