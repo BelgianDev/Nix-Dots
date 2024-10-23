@@ -2,7 +2,7 @@
 
 {
   programs.fish.enable = true;
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs-unstable; [
     
     # Tools
     git
@@ -16,6 +16,9 @@
     ffmpeg
     killall
     caligula # USB Flashing
+
+    # Secrets
+    sops
     
     # Libs
     libnotify
@@ -34,6 +37,11 @@
     # Monitoring
     htop
     btop
+
+    # Java
+    jdk21
+    jdk17
+    jdk8
 
     # Funny Stuff
     pipes-rs

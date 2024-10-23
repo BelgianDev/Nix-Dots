@@ -10,6 +10,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    sops = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
+
     stylix = {
       url = "github:danth/stylix/release-24.05"; # Regreet breaks shit
       inputs.nixpkgs.follows = "nixpkgs";
@@ -22,7 +27,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, stylix, ... }@inputs: 
+  outputs = { self, nixpkgs, nixpkgs-unstable, stylix, sops, ... }@inputs: 
   {
     nixosConfigurations.desktop = nixpkgs.lib.nixosSystem rec {
       system = "x86_64-linux";
@@ -43,6 +48,7 @@
       
       modules = [
         stylix.nixosModules.stylix
+        sops.nixosModules.sops
 	      ./hosts/desktop/configuration.nix
       ];
     };

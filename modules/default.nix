@@ -1,12 +1,17 @@
-{ lib, ... }: 
+{ lib, pkgs-unstable, ... }: 
 
 {
   imports = [
-    ./system-theme.nix
     ./cli.nix
+    ./secrets.nix
+    ./system-theme.nix
 
     ./app/browser/zen.nix
+    ./app/dev/java.nix
+    ./app/gaming/steam.nix
+    ./app/gaming/minecraft.nix
     ./app/sftp/filezilla.nix
+    ./app/virtualization/boxes.nix
 
     ./desktop/gnome.nix
     ./kernel/kernel.nix
@@ -15,8 +20,12 @@
   ];
 
   # Apps
-  module.app.browser.zen.enable = true;
-  module.app.sftp.filezilla.enable = true;
+  module.app.browser.zen.enable = lib.mkDefault true;
+  module.app.dev.java.enable = lib.mkDefault true;
+  module.app.gaming.steam.enable = lib.mkDefault false;
+  module.app.gaming.minecraft.enable = lib.mkDefault true;
+  module.app.sftp.filezilla.enable = lib.mkDefault true;
+  module.app.virtualisation.boxes.enable = lib.mkDefault false;
 
   # Desktops
   module.desktop.gnome = {

@@ -33,6 +33,10 @@
   networking.firewall.enable = false; # Fuck the firewall
   networking.networkmanager.enable = true;
 
+  # Apps
+  module.app.gaming.steam.enable = true;
+  module.app.virtualisation.boxes.enable = true;
+
   # Forced Apps - Temporary
   environment.systemPackages = with pkgs; [
     alacritty

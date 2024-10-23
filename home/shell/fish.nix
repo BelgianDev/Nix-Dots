@@ -24,7 +24,7 @@ in {
       '';
 
       shellAliases = {
-        ls = "eza";
+        ls = "eza -a";
         cat = "bat";
         disk = "dust";
         search = "fzf";
