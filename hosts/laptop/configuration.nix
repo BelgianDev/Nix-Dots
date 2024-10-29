@@ -36,6 +36,7 @@
     vscode
 
     spotify
+    teams-for-linux
   ];
 
 

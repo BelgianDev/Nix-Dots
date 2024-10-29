@@ -28,6 +28,11 @@ in {
           natural-scroll = false;
         };
 
+        "org/gnome/desktop/peripherals/touchpad" = {
+          click-method = "areas";
+          natural-scroll = true;
+        };
+
         "org/gnome/system/location" = {
           enabled = false;
         };
@@ -44,12 +49,24 @@ in {
           dynamic-workspaces = true;
         };
 
+        "org/gnome/settings-daemon/plugins/color" = {
+          night-light-schedule-automatic = false;
+          night-light-from = 19.0;
+          night-light-to = 5.0;
+        };
+
+        "org/gnome/settings-daemon/plugins/power" = {
+          power-button-action = "nothing";
+        };
+
         # Keybindings
         "org/gnome/shell/keybindings" = {
           show-screenshot-ui = ["<Super><Shift>S"];
         };
 
         "org/gnome/desktop/wm/keybindings" = {
+          close = ["<Super>q"];
+
           switch-to-workspace-left = ["<Super><Control>Left"];
           switch-to-workspace-right = ["<Super><Control>Right"];
         };
@@ -131,7 +148,6 @@ in {
         { package = blur-my-shell; }
         { package = vitals; }
         { package = forge; }
-        { package = unite; }
       ];
     };
   };
