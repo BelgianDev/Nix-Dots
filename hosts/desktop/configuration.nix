@@ -43,6 +43,7 @@
     vesktop
 
     vscode
+    postman
 
     spotify
   ];

@@ -59,6 +59,14 @@ in {
           power-button-action = "nothing";
         };
 
+        "org/gnome/nautilus/list-view" = {
+          use-tree-view = true;
+        };
+
+        "org/gtk/gtk4/settings/file-chooser" = {
+          show-hidden = true;
+        };
+
         # Keybindings
         "org/gnome/shell/keybindings" = {
           show-screenshot-ui = ["<Super><Shift>S"];
