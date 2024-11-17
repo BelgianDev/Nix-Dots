@@ -22,6 +22,9 @@
     
     # Libs
     libnotify
+    gcc
+    cmake
+    libGL
 
     # Macros
     xdotool
@@ -42,6 +45,12 @@
     jdk21
     jdk17
     jdk8
+
+    openjdk
+
+    zulu21
+    zulu17
+    zulu8
 
     # Funny Stuff
     pipes-rs

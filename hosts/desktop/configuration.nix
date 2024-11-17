@@ -43,9 +43,10 @@
     vesktop
 
     vscode
-    postman
+    postman 
 
     spotify
+    teams-for-linux
   ];
 
 

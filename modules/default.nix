@@ -6,6 +6,7 @@
     ./secrets.nix
     ./system-theme.nix
 
+    ./app/neovim.nix
     ./app/browser/zen.nix
     ./app/dev/java.nix
     ./app/gaming/steam.nix
@@ -20,6 +21,7 @@
   ];
 
   # Apps
+  module.app.neovim.enable = false;
   module.app.browser.zen.enable = lib.mkDefault true;
   module.app.dev.java.enable = lib.mkDefault true;
   module.app.gaming.steam.enable = lib.mkDefault false;

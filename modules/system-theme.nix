@@ -4,6 +4,12 @@
   stylix.enable = true;
   stylix.autoEnable = true;
 
+  # Home Manager Integration
+  stylix.homeManagerIntegration = {
+    autoImport = true;
+    followSystem = true;
+  };
+
   # Disables TTY theming.
   stylix.targets.console.enable = false;
 
@@ -13,7 +19,7 @@
   stylix.polarity = "dark";
 
   stylix.opacity = {
-    applications = 1.0;
+    applications = 10;
     terminal = 0.8;
     desktop = 1.0;
     popups = 1.0;

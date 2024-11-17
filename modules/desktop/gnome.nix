@@ -36,6 +36,8 @@ in {
       gnome-screenshot
       gnome-disk-utility
 
+      pkgs.libnotify
+
       pkgs.baobab
       pkgs.gnome-photos
 

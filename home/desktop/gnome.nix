@@ -19,6 +19,10 @@ in {
           focus-mode = "mouse";
         };
 
+        "org/gnome/desktop/notifications" = {
+          show-banners = true;
+        };
+
         "org/gnome/desktop/interface" = {
           gtk-enable-primary-paste = false;
           enable-hot-corners = false;
@@ -74,6 +78,7 @@ in {
 
         "org/gnome/desktop/wm/keybindings" = {
           close = ["<Super>q"];
+          toggle-fullscreen = ["F11"];
 
           switch-to-workspace-left = ["<Super><Control>Left"];
           switch-to-workspace-right = ["<Super><Control>Right"];
@@ -129,16 +134,6 @@ in {
           con-stacked-layout-toggle = []; # Conflict with screenshot keybind
         };
 
-        # Extension - Unite
-        "org/gnome/shell/extensions/unite" = {
-          desktop-name-text = "~";
-          extend-left-box = false;
-          show-desktop-name = true;
-          autofocus-windows = true;
-          hide-app-menu-icon = true;
-          reduce-panel-spacing = false;
-        };
-
         # Extension - Vitals
         "org/gnome/shell/extensions/vitals" = {
           position-in-panel = 0;
@@ -146,6 +141,18 @@ in {
           fixed-widths = true;
           icon-style = 1;
           use-higher-precision = false;
+
+          show-temperature = true;
+          show-voltage = false;
+          show-fan = true;
+          show-memory = true;
+          show-processor = true;
+          show-network = true;
+          show-storage = false;
+          show-battery = true;
+          show-gpu = true;
+
+          hot-sensors = [ "_processor_usage_" "_memory_usage_" "__temperature_avg__" ];
         };
       };
     };
