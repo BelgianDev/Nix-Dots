@@ -72,6 +72,12 @@ in {
         };
 
         # Keybindings
+        "org/gnome/desktop/input-sources" = {
+          sources = [
+            (hm.gvariant.mkTuple [ "xkb" "be" ])
+          ];
+        };
+
         "org/gnome/shell/keybindings" = {
           show-screenshot-ui = ["<Super><Shift>S"];
         };
