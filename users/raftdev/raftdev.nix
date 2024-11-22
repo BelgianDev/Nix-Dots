@@ -13,7 +13,7 @@
   };
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs pkgs-unstable; };
+    extraSpecialArgs = { inherit inputs pkgs pkgs-unstable; };
     users."raftdev" = import ./home.nix;
   };
 }

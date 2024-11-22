@@ -140,6 +140,13 @@ in {
           con-stacked-layout-toggle = []; # Conflict with screenshot keybind
         };
 
+        "org/gnome/shell/extensions/forge" = {
+          window-gap-size = 5;
+          window-gap-size-increment = 1;
+
+          tabbed-tiling-mode-enable = false;
+        };
+
         # Extension - Vitals
         "org/gnome/shell/extensions/vitals" = {
           position-in-panel = 0;
@@ -165,7 +172,7 @@ in {
 
     programs.gnome-shell = {
       enable = true;
-      extensions = with pkgs.gnomeExtensions; [
+      extensions = with pkgs-unstable.gnomeExtensions; [
         { package = blur-my-shell; }
         { package = vitals; }
         { package = forge; }

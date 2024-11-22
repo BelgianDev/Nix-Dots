@@ -25,13 +25,19 @@
       url = "github:ch4og/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+
+    # Spicetify
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, stylix, sops, ... }@inputs: 
+  outputs = { self, nixpkgs, nixpkgs-unstable, stylix, sops, spicetify-nix, ... }@inputs: 
   {
     nixosConfigurations.desktop = nixpkgs.lib.nixosSystem rec {
       system = "x86_64-linux";
-
+      
       specialArgs = {
 	      inherit inputs;
 

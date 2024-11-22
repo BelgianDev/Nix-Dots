@@ -26,7 +26,7 @@ in {
       gnome-tour
     ];
 
-    environment.systemPackages = with pkgs.gnome; [
+    environment.systemPackages = with pkgs-unstable; [
       # Default Environment apps
       eog
       totem
@@ -36,10 +36,10 @@ in {
       gnome-screenshot
       gnome-disk-utility
 
-      pkgs.libnotify
+      libnotify
 
-      pkgs.baobab
-      pkgs.gnome-photos
+      baobab
+      gnome-photos
 
       # Only used to determine settings name, it's recommended to simply modify the nix file, and not settings in these apps directly.
       gnome-tweaks

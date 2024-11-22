@@ -30,17 +30,10 @@
 
   # Forced Apps - Temporary
   environment.systemPackages = with pkgs; [
-    alacritty
     vesktop
 
     vscode
-
-    spotify
-    teams-for-linux
   ];
-
-
-  ## NEEDS TO BE PLACED IN PROPER CONFIG.
 
   # Set your time zone.
   time.timeZone = "Europe/Brussels";
@@ -70,5 +63,4 @@
   console.keyMap = "be-latin1";
 
   system.stateVersion = "24.05"; # Did you read the comment?
-
 }

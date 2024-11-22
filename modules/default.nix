@@ -6,9 +6,10 @@
     ./secrets.nix
     ./system-theme.nix
 
-    ./app/neovim.nix
-    ./app/browser/zen.nix
+    ./app/teams.nix
     ./app/dev/java.nix
+    ./app/dev/analysis.nix
+    ./app/browser/zen.nix
     ./app/gaming/steam.nix
     ./app/gaming/minecraft.nix
     ./app/sftp/filezilla.nix
@@ -21,9 +22,10 @@
   ];
 
   # Apps
-  module.app.neovim.enable = false;
-  module.app.browser.zen.enable = lib.mkDefault true;
+  module.app.teams.enable = true;
   module.app.dev.java.enable = lib.mkDefault true;
+  module.app.dev.analysis.enable = lib.mkDefault true;
+  module.app.browser.zen.enable = lib.mkDefault true;
   module.app.gaming.steam.enable = lib.mkDefault false;
   module.app.gaming.minecraft.enable = lib.mkDefault true;
   module.app.sftp.filezilla.enable = lib.mkDefault true;

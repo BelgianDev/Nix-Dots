@@ -7,24 +7,34 @@
     # Tools
     git
     nano
-    curl
-    wget
-    unzip
     tree
-    lsof
-    lshw
     ffmpeg
     killall
-    caligula # USB Flashing
+    ipcalc
+
+    # Archives
+    zip
+    xz
+    unzip
+    p7zip
+
+    # Web
+    curl
+    wget
+
+    # Flashing
+    caligula
+
+    # System Info
+    lsof
+    lshw
+    usbutils
+    pciutils
+    ethtool
+    sysstat
 
     # Secrets
     sops
-    
-    # Libs
-    libnotify
-    gcc
-    cmake
-    libGL
 
     # Macros
     xdotool
@@ -40,6 +50,9 @@
     # Monitoring
     htop
     btop
+    mtr
+    iotop
+    iftop
 
     # Java
     jdk21
@@ -48,7 +61,6 @@
 
     # Funny Stuff
     pipes-rs
-    cava
     figlet
     cowsay
     cmatrix
