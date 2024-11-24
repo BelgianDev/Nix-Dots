@@ -176,6 +176,7 @@ in {
         { package = blur-my-shell; }
         { package = vitals; }
         { package = forge; }
+        { package = no-title-bar; }
       ];
     };
   };

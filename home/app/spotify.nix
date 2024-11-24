@@ -1,4 +1,4 @@
-{ config, lib, pkgs, inputs, ... }:
+{ config, lib, pkgs, pkgs-unstable, inputs, ... }:
 
 with lib;
 
@@ -16,19 +16,28 @@ in {
   };
 
   config = mkIf cfg.enable {
-    home.packages = with pkgs; [
-      spotify
-    ];
-
-    /*programs.spicetify = {
+    programs.spicetify = {
       enable = true;
+      spicetifyPackage = pkgs-unstable.spicetify-cli;
+
+      enabledCustomApps = with spicePkgs.apps; [
+        newReleases
+      ];
+
       enabledExtensions = with spicePkgs.extensions; [
         adblock
-        hidePodcasts
-        shuffle # shuffle+ (special characters are sanitized out of extension names)
+        shuffle
+        fullAppDisplay
+        trashbin
+
+        copyToClipboard
+        powerBar
+        fullAlbumDate
+        history
+        betterGenres
+        playingSource
+        oneko
       ];
-      theme = spicePkgs.themes.catppuccin;
-      colorScheme = "mocha";
-    };*/
+    };
   };
 }
