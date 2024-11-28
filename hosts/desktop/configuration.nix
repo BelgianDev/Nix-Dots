@@ -40,8 +40,21 @@
   # Forced Apps - Temporary
   environment.systemPackages = with pkgs; [
     vesktop
+    whatsapp-for-linux
 
     vscode
+    blockbench
+    pinta
+  ];
+
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    libpulseaudio
+    libGL
+    glfw
+    openal
+    stdenv.cc.cc.lib
+    flite
   ];
 
   # Set your time zone.

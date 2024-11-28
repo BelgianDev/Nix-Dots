@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 
 {
   imports = [
@@ -21,5 +21,11 @@
 
   home.sessionVariables = {
     EDITOR = "nano";
+  };
+
+  # Fixes Graphical Stuff with java
+  programs.java = {
+    enable = true;
+    package = (pkgs.jdk17.override { enableJavaFX = true; });
   };
 }

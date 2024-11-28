@@ -1,4 +1,4 @@
-{ lib, pkgs-unstable, ... }: 
+{ lib, pkgs, pkgs-unstable, ... }: 
 
 {
   imports = [
@@ -48,4 +48,11 @@
 
   # Services
   module.service.bluetooth.enable = lib.mkDefault true;
+
+  # Other
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    # Add any missing dynamic libraries for unpackaged programs
+    # here, NOT in environment.systemPackages
+  ];
 }

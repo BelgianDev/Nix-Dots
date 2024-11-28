@@ -13,6 +13,8 @@
   home.app.spotify.enable = lib.mkDefault true; # Spotify
   home.app.terminal.alacritty.enable = lib.mkDefault true; # Alacritty
 
+
+
   # Cli
   home.cli.btop.enable = lib.mkDefault true; # Btop
 
