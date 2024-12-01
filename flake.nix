@@ -2,11 +2,11 @@
   description = "RaftDev's Configuration Flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.05";
+      url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -16,7 +16,7 @@
     };
 
     stylix = {
-      url = "github:danth/stylix/release-24.05"; # Regreet breaks shit
+      url = "github:danth/stylix/master"; # Regreet breaks shit
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
