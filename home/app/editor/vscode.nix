@@ -20,6 +20,7 @@ in {
 
       userSettings = {
         "files.autoSave" = "onFocusChange";
+        "git.confirmSync" = false;
 
         # Editor LSP
         "nix.serverPath" = "nixd";
