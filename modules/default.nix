@@ -1,4 +1,4 @@
-{ lib, pkgs, pkgs-unstable, ... }: 
+{ lib, pkgs, pkgs-unstable, inputs, ... }: 
 
 {
   imports = [
@@ -50,9 +50,15 @@
   module.service.bluetooth.enable = lib.mkDefault true;
 
   # Other
+  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
-    # Add any missing dynamic libraries for unpackaged programs
-    # here, NOT in environment.systemPackages
+    libpulseaudio
+    libGL
+    glfw
+    openal
+    stdenv.cc.cc.lib
+    flite
   ];
 }

@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./app/editor.nix
+    ./app/editor/vscode.nix
     ./app/spotify.nix
     ./app/terminal/alacritty.nix
     ./cli/btop.nix
@@ -11,9 +11,9 @@
   ];
 
   # Apps
+  home.app.editor.vscode.enable = lib.mkDefault true;
   home.app.spotify.enable = lib.mkDefault true; # Spotify
   home.app.terminal.alacritty.enable = lib.mkDefault true; # Alacritty
-
 
 
   # Cli

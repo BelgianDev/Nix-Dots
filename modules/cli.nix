@@ -1,9 +1,9 @@
-{ pkgs, pkgs-unstable, ... }: 
+{ pkgs-unstable, ... }:
 
 {
   programs.fish.enable = true;
   environment.systemPackages = with pkgs-unstable; [
-    
+
     # Tools
     git
     nano
@@ -11,6 +11,9 @@
     ffmpeg
     killall
     ipcalc
+
+    # Formatters
+    nixfmt-rfc-style
 
     # Archives
     zip

@@ -33,7 +33,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, stylix, sops, spicetify-nix, ... }@inputs: 
+  outputs = { nixpkgs, nixpkgs-unstable, stylix, sops, ... }@inputs: 
   {
     nixosConfigurations.desktop = nixpkgs.lib.nixosSystem rec {
       system = "x86_64-linux";
