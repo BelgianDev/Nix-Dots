@@ -42,7 +42,6 @@
     vesktop
     whatsapp-for-linux
 
-    vscode
     blockbench
     pinta
   ];

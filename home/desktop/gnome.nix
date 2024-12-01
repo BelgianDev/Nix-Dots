@@ -96,6 +96,10 @@ in {
           maximize = [];
         };
 
+        "org/gnome/mutter" = {
+          check-alive-timeout = 0; # Disable 'Window not responding' popup
+        };
+
         "org/gnome/settings-daemon/plugins/media-keys" = {
           www = ["<Super>w"];
           help = [];

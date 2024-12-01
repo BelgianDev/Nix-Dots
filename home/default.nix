@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./app/editor.nix
     ./app/spotify.nix
     ./app/terminal/alacritty.nix
     ./cli/btop.nix

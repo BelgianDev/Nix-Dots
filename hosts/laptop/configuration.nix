@@ -31,8 +31,6 @@
   # Forced Apps - Temporary
   environment.systemPackages = with pkgs; [
     vesktop
-
-    vscode
   ];
 
   # Set your time zone.
