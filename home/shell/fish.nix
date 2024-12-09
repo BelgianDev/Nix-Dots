@@ -30,6 +30,7 @@ in {
         search = "fzf";
 
         notes = "nano ~/notes.txt";
+        fdupl = "find . ! -empty -type f -exec md5sum {} + | sort | uniq -w32 -dD";
 
         pipes = "pipes-rs";
         say = "cowsay -r";
