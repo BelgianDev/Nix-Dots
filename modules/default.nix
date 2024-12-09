@@ -3,6 +3,7 @@
 {
   imports = [
     ./cli.nix
+    ./fonts.nix
     ./secrets.nix
     ./system-theme.nix
 
@@ -32,6 +33,7 @@
   module.app.virtualisation.boxes.enable = lib.mkDefault false;
 
   # Desktops
+  module.fonts.enable = lib.mkDefault true;
   module.desktop.gnome = {
     enable = lib.mkDefault true;
     wayland = lib.mkDefault true;
