@@ -10,15 +10,19 @@ in {
   };
 
   config = mkIf cfg.enable {
+    programs.wireshark = {
+      enable = true;
+      package = pkgs-unstable.wireshark;
+    };
+
     environment.systemPackages = with pkgs-unstable; [
       postman
 
       # Wireshark
-      wireshark
       tshark
       termshark
 
-      ripgrep # recursively searches directories for a regex pattern
+      ripgrep # recursively searches web directories for a regex pattern
       nmap
       whois
     ];

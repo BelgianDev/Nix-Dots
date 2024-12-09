@@ -8,7 +8,7 @@
   users.users.raftdev = {
     isNormalUser = true;
     description = "RaftDev";
-    extraGroups = [ "raftdev" "networkmanager" "wheel" "docker" "libvirtd" ];
+    extraGroups = [ "raftdev" "networkmanager" "wheel" "docker" "libvirtd" "wireshark" ];
     shell = pkgs.fish;
   };
 
