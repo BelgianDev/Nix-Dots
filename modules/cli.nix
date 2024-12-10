@@ -68,7 +68,7 @@
     cowsay
     cmatrix
     cbonsai
-    pfetch
-    neofetch
+    pfetch-rs
+    fastfetch
   ];
 }

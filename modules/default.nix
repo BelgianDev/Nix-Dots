@@ -1,4 +1,4 @@
-{ lib, pkgs, pkgs-unstable, inputs, ... }: 
+{ lib, pkgs, inputs, ... }: 
 
 {
   imports = [
@@ -52,7 +52,7 @@
   module.service.bluetooth.enable = lib.mkDefault true;
 
   # Other
-  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" "nixpkgs-unstable=${inputs.nixpkgs-unstable}" ];
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
