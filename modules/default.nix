@@ -7,6 +7,7 @@
     ./secrets.nix
     ./system-theme.nix
 
+    ./app/bitwarden.nix
     ./app/teams.nix
     ./app/dev/java.nix
     ./app/dev/analysis.nix
@@ -23,6 +24,7 @@
   ];
 
   # Apps
+  module.app.bitwarden.enable = true;
   module.app.teams.enable = true;
   module.app.dev.java.enable = lib.mkDefault true;
   module.app.dev.analysis.enable = lib.mkDefault true;
