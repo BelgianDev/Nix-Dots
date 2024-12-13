@@ -35,6 +35,7 @@
     pciutils
     ethtool
     sysstat
+    smartmontools
 
     # Secrets
     sops
