@@ -1,4 +1,4 @@
-{ config, lib, pkgs-unstable, ... }:
+{ config, lib, pkgs, ... }:
 
 with lib;
 
@@ -16,7 +16,7 @@ in {
     services.qemuGuest.enable = true;
     services.spice-vdagentd.enable = true; # Enables copy and paste bewteen host and guest.
 
-    environment.systemPackages = with pkgs-unstable; [
+    environment.systemPackages = with pkgs; [
       gnome-boxes
     ];
   };

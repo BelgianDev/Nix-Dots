@@ -1,8 +1,8 @@
-{ pkgs-unstable, ... }:
+{ pkgs, pkgs-unstable, ... }:
 
 {
   programs.fish.enable = true;
-  environment.systemPackages = with pkgs-unstable; [
+  environment.systemPackages = with pkgs; [
 
     # Tools
     git
@@ -59,9 +59,9 @@
     iftop
 
     # Java
-    jdk21
-    jdk17
-    jdk8
+    pkgs-unstable.jdk21
+    pkgs-unstable.jdk17
+    pkgs-unstable.jdk8
 
     # Funny Stuff
     pipes-rs

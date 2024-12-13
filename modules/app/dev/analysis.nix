@@ -1,4 +1,4 @@
-{ config, lib, pkgs-unstable, ... }:
+{ config, lib, pkgs, ... }:
 
 with lib;
 
@@ -12,10 +12,10 @@ in {
   config = mkIf cfg.enable {
     programs.wireshark = {
       enable = true;
-      package = pkgs-unstable.wireshark;
+      package = pkgs.wireshark;
     };
 
-    environment.systemPackages = with pkgs-unstable; [
+    environment.systemPackages = with pkgs; [
       postman
 
       # Wireshark

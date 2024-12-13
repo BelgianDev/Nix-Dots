@@ -1,4 +1,4 @@
-{ config, lib, pkgs-unstable, ... }:
+{ config, lib, pkgs, ... }:
 
 with lib;
 
@@ -13,8 +13,8 @@ in {
     programs.vscode = {
       enable = true;
       enableUpdateCheck = false; # Fuck off update popups
-      package = pkgs-unstable.vscodium;
-      extensions = with pkgs-unstable.vscode-extensions; [
+      package = pkgs.vscodium;
+      extensions = with pkgs.vscode-extensions; [
         jnoortheen.nix-ide
       ];
 
@@ -34,7 +34,7 @@ in {
       };
     };
 
-    home.packages = with pkgs-unstable; [
+    home.packages = with pkgs; [
       nixd
     ];
   };

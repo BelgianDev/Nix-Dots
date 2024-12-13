@@ -22,8 +22,8 @@
 
     # Zen - Browser
     zen = {
-      url = "github:ch4og/zen-browser-flake";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # Spicetify
