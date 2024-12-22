@@ -17,9 +17,11 @@
     ./app/sftp/filezilla.nix
     ./app/virtualization/boxes.nix
 
-    ./desktop/gnome.nix
+    ./kernel/controller.nix
     ./kernel/kernel.nix
     ./kernel/nvidia.nix
+
+    ./desktop/gnome.nix
     ./service/bluetooth.nix
   ];
 
@@ -44,6 +46,7 @@
 
   # Kernel Stuff
   module.kernel.unstable = lib.mkDefault false; # Shit may break.
+  module.kernel.controller.enable = lib.mkDefault true;
   module.kernel.nvidia = {
     enable = lib.mkDefault false;
     open = lib.mkDefault false;
