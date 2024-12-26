@@ -15,12 +15,14 @@
     ./app/browser/zen.nix
     ./app/gaming/steam.nix
     ./app/gaming/minecraft.nix
+    ./app/gaming/suyu.nix
     ./app/sftp/filezilla.nix
     ./app/virtualization/boxes.nix
 
     ./kernel/controller.nix
     ./kernel/kernel.nix
     ./kernel/nvidia.nix
+    ./kernel/graphics.nix
 
     ./desktop/gnome.nix
     ./service/bluetooth.nix
@@ -34,6 +36,7 @@
   module.app.browser.zen.enable = lib.mkDefault true;
   module.app.gaming.steam.enable = lib.mkDefault false;
   module.app.gaming.minecraft.enable = lib.mkDefault true;
+  module.app.gaming.suyu.enable = lib.mkDefault false;
   module.app.sftp.filezilla.enable = lib.mkDefault true;
   module.app.virtualisation.boxes.enable = lib.mkDefault false;
 
