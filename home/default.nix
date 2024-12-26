@@ -19,7 +19,7 @@
   # Cli
   home.cli.btop.enable = lib.mkDefault true; # Btop
 
-  # DesktopS
+  # Desktop
   home.desktop.gnome.enable = lib.mkDefault true; # Default DE
 
   # Shells

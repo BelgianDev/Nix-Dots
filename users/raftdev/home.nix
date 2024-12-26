@@ -26,6 +26,6 @@
   # Fixes Graphical Stuff with java
   programs.java = {
     enable = true;
-    package = (pkgs.jdk17.override { enableJavaFX = true; });
+    package = (pkgs.jdk21.override { enableJavaFX = true; });
   };
 }

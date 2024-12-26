@@ -5,6 +5,7 @@
     ./cli.nix
     ./fonts.nix
     ./secrets.nix
+    ./network.nix
     ./system-theme.nix
 
     ./app/bitwarden.nix
@@ -55,7 +56,7 @@
 
   # Services
   module.service.bluetooth.enable = lib.mkDefault true;
-
+  
   # Other
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" "nixpkgs-unstable=${inputs.nixpkgs-unstable}" ];
 
