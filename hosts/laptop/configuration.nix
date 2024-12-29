@@ -24,9 +24,9 @@
   networking.networkmanager.enable = true;
 
   # Apps
-  module.app.gaming.steam.enable = false;
+  module.app.gaming.steam.enable = true;
   module.app.gaming.minecraft.enable = true;
-  module.app.virtualisation.boxes.enable = false;
+  module.app.virtualisation.boxes.enable = true;
 
   # Forced Apps - Temporary
   environment.systemPackages = with pkgs; [
