@@ -21,6 +21,9 @@
     unzip
     p7zip
 
+    # Compilers
+    gcc
+
     # Web
     curl
     wget

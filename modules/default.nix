@@ -10,8 +10,9 @@
 
     ./app/bitwarden.nix
     ./app/teams.nix
-    ./app/dev/java.nix
     ./app/dev/analysis.nix
+    ./app/dev/java.nix
+    ./app/dev/rust.nix
     ./app/browser/zen.nix
     ./app/gaming/steam.nix
     ./app/gaming/minecraft.nix
@@ -32,6 +33,7 @@
   module.app.bitwarden.enable = true;
   module.app.teams.enable = true;
   module.app.dev.java.enable = lib.mkDefault true;
+  module.app.dev.rust.enable = lib.mkDefault true;
   module.app.dev.analysis.enable = lib.mkDefault true;
   module.app.browser.zen.enable = lib.mkDefault true;
   module.app.gaming.steam.enable = lib.mkDefault false;
@@ -66,10 +68,19 @@
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
     libpulseaudio
-    libGL
     glfw
     openal
     stdenv.cc.cc.lib
     flite
+    libxkbcommon
+    wayland
+
+    libGL
+    libGL.dev
+
+    xorg.libX11
+    xorg.libXcursor
+    xorg.libXrandr
+    xorg.libXi
   ];
 }

@@ -12,6 +12,7 @@
 
   # Apps
   home.app.editor.vscode.enable = lib.mkDefault true;
+
   home.app.spotify.enable = lib.mkDefault true; # Spotify
   home.app.terminal.alacritty.enable = lib.mkDefault true; # Alacritty
 
