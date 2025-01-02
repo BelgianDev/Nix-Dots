@@ -19,6 +19,15 @@
     userEmail = "theraft08@gmail.com";
   };
 
+  programs.gh-dash.enable = true;
+  programs.gh = {
+    enable = true;
+    gitCredentialHelper.enable = true;
+    settings = {
+      git_protocol = "ssh";
+    };
+  };
+
   home.sessionVariables = {
     EDITOR = "nano";
   };
