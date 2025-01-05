@@ -82,5 +82,6 @@
     xorg.libXcursor
     xorg.libXrandr
     xorg.libXi
+    xorg.libXxf86vm
   ];
 }
