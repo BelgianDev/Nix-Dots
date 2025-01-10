@@ -10,6 +10,7 @@
 
     ./app/bitwarden.nix
     ./app/teams.nix
+    ./app/wine.nix
     ./app/dev/analysis.nix
     ./app/dev/java.nix
     ./app/dev/rust.nix
@@ -30,8 +31,9 @@
   ];
 
   # Apps
-  module.app.bitwarden.enable = true;
-  module.app.teams.enable = true;
+  module.app.bitwarden.enable = lib.mkDefault true;
+  module.app.teams.enable = lib.mkDefault true;
+  module.app.wine.enable = lib.mkDefault true;
   module.app.dev.java.enable = lib.mkDefault true;
   module.app.dev.rust.enable = lib.mkDefault true;
   module.app.dev.analysis.enable = lib.mkDefault true;
