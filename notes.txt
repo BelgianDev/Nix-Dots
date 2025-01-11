@@ -1,0 +1,3 @@
+
+- 11/01/25 -> Updating the whole system bring issues, nvidia drivers are running on 550 instead of 565, 
+              Bluetooth is also broken. Needs looking into this.
