@@ -88,5 +88,29 @@
 	      ./hosts/laptop/configuration.nix
       ];
     };
+
+    nixosConfigurations.server = nixpkgs.lib.nixosSystem rec {
+      system = "x86_64-linux";
+
+      specialArgs = {
+	      inherit inputs;
+
+        pkgs = import nixpkgs {
+          config.allowUnfree = true;
+          inherit system;
+        };
+
+        pkgs-unstable = import nixpkgs-unstable {
+          config.allowUnfree = true;
+          inherit system;
+        };
+      };
+      
+      modules = [
+        stylix.nixosModules.stylix
+        sops.nixosModules.sops
+	      ./hosts/server/configuration.nix
+      ];
+    };
   };
 }
