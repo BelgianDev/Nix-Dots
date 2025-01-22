@@ -57,6 +57,14 @@
 
   module.service.bluetooth.enable = false;
 
+  services.openssh = {
+    enable = true;
+    ports = [ 22 ];
+    settings = {
+      PermitRootLogin = "no"; # "yes", "without-password", "prohibit-password", "forced-commands-only", "no"
+    };
+  };
+
   # Set your time zone.
   time.timeZone = "Europe/Brussels";
 
