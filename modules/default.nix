@@ -14,6 +14,7 @@
     ./app/dev/analysis.nix
     ./app/dev/java.nix
     ./app/dev/rust.nix
+    ./app/dev/docker.nix
     ./app/browser/zen.nix
     ./app/gaming/steam.nix
     ./app/gaming/minecraft.nix
@@ -37,6 +38,7 @@
   module.app.dev.java.enable = lib.mkDefault true;
   module.app.dev.rust.enable = lib.mkDefault true;
   module.app.dev.analysis.enable = lib.mkDefault true;
+  module.app.dev.docker.enable = lib.mkDefault true;
   module.app.browser.zen.enable = lib.mkDefault true;
   module.app.gaming.steam.enable = lib.mkDefault false;
   module.app.gaming.minecraft.enable = lib.mkDefault true;
