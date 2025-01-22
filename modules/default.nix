@@ -22,6 +22,8 @@
     ./app/sftp/filezilla.nix
     ./app/virtualization/boxes.nix
 
+    ./container/excalidraw.nix
+
     ./kernel/controller.nix
     ./kernel/kernel.nix
     ./kernel/nvidia.nix
@@ -45,6 +47,11 @@
   module.app.gaming.suyu.enable = lib.mkDefault false;
   module.app.sftp.filezilla.enable = lib.mkDefault true;
   module.app.virtualisation.boxes.enable = lib.mkDefault false;
+
+  # Containers
+  module.container = {
+    excalidraw.enable = lib.mkDefault false;
+  };
 
   # Desktops
   module.fonts.enable = lib.mkDefault true;

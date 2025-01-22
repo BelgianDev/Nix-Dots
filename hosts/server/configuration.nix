@@ -20,6 +20,11 @@
   networking.firewall.enable = false;
   networking.networkmanager.enable = true;
 
+  # Containers
+  module.container = {
+    excalidraw.enable = true;
+  };
+
   # Apps
   module.app = {
     bitwarden.enable = false;

@@ -17,5 +17,7 @@ in {
         iptables = true;
       };
     };
+
+    virtualisation.oci-containers.backend = "docker";
   };
 }
