@@ -27,10 +27,13 @@
   module.app.gaming.steam.enable = true;
   module.app.gaming.minecraft.enable = true;
   module.app.virtualisation.boxes.enable = true;
+  module.app.dev.python.enable = true;
 
   # Forced Apps - Temporary
   environment.systemPackages = with pkgs; [
     vesktop
+    gimp
+    xp-pen-g430-driver
   ];
 
   # Set your time zone.

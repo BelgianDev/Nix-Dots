@@ -13,6 +13,7 @@
     ./app/wine.nix
     ./app/dev/analysis.nix
     ./app/dev/java.nix
+    ./app/dev/python.nix
     ./app/dev/rust.nix
     ./app/dev/docker.nix
     ./app/browser/zen.nix
@@ -39,6 +40,7 @@
   module.app.wine.enable = lib.mkDefault true;
   module.app.dev.java.enable = lib.mkDefault true;
   module.app.dev.rust.enable = lib.mkDefault true;
+  module.app.dev.python.enable = lib.mkDefault false;
   module.app.dev.analysis.enable = lib.mkDefault true;
   module.app.dev.docker.enable = lib.mkDefault true;
   module.app.browser.zen.enable = lib.mkDefault true;
