@@ -20,7 +20,7 @@ in {
       open = cfg.open;
 
       nvidiaSettings = cfg.settings;
-      package = mkDefault config.boot.kernelPackages.nvidiaPackages.stable;
+      package = mkDefault config.boot.kernelPackages.nvidiaPackages.latest;
     };
 
     services.xserver.videoDrivers = [ "nvidia" ];

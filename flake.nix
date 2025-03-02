@@ -16,7 +16,7 @@
     };
 
     stylix = {
-      url = "github:danth/stylix/master"; # Regreet breaks shit
+      url = "github:danth/stylix/release-24.11"; # Regreet breaks shit
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

@@ -18,7 +18,6 @@ in {
   config = mkIf cfg.enable {
     programs.spicetify = {
       enable = true;
-      spicetifyPackage = pkgs-unstable.spicetify-cli;
 
       enabledCustomApps = with spicePkgs.apps; [
         newReleases
