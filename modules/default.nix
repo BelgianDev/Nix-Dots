@@ -8,6 +8,7 @@
     ./network.nix
     ./system-theme.nix
 
+    ./app/aseprite.nix
     ./app/bitwarden.nix
     ./app/teams.nix
     ./app/wine.nix
