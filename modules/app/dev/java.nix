@@ -12,6 +12,7 @@ in {
   config = mkIf cfg.enable {
     environment.systemPackages = with pkgs-unstable; [
       jetbrains.idea-ultimate
+      visualvm
     ];
   };
 }
