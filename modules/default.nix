@@ -12,6 +12,7 @@
     ./app/bitwarden.nix
     ./app/teams.nix
     ./app/wine.nix
+    ./app/mqtt.nix
     ./app/dev/analysis.nix
     ./app/dev/java.nix
     ./app/dev/python.nix

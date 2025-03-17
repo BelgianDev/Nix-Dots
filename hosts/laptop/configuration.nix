@@ -24,6 +24,7 @@
   networking.networkmanager.enable = true;
 
   # Apps
+  module.app.mqtt.enable = true;
   module.app.gaming.steam.enable = true;
   module.app.gaming.minecraft.enable = true;
   module.app.dev.c.enable = false;
