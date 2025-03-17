@@ -18,6 +18,7 @@
     ./app/dev/rust.nix
     ./app/dev/docker.nix
     ./app/dev/c.nix
+    ./app/dev/web.nix
     ./app/browser/zen.nix
     ./app/gaming/steam.nix
     ./app/gaming/minecraft.nix
