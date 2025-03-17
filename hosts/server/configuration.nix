@@ -30,7 +30,6 @@
     bitwarden.enable = false;
     teams.enable = false;
     wine.enable = false;
-    mqtt.enable = true;
 
     sftp.filezilla.enable = false;
     virtualisation.boxes.enable = false;

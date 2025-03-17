@@ -34,6 +34,7 @@
   networking.networkmanager.enable = true;
 
   # Apps
+  module.app.mqtt.enable = true;
   module.app.aseprite.enable = true;
   module.app.dev.c.enable = false;
   module.app.dev.web.enable = true;
