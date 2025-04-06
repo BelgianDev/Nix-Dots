@@ -22,6 +22,12 @@ in {
           omitPasswordAuth = true;
           settings.allow_anonymous = true;
         }
+        {
+          port = 9001;
+          settings = {
+            protocol = "websockets";
+          };
+       }  
       ];
     };
   };
