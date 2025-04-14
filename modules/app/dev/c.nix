@@ -16,9 +16,11 @@ in {
       gcc
       meson
 
-      # QT Dev
-      qt6.full
-      qtcreator
+      cmake
+      ninja
+      dfu-util
+
+      arduino-ide
     ];
   };
 }

@@ -20,12 +20,18 @@ in {
         {
           acl = [ "pattern readwrite #" ];
           omitPasswordAuth = true;
-          settings.allow_anonymous = true;
+          port = 1883;
+          settings = {
+            allow_anonymous = true;
+          };
         }
         {
+          acl = [ "pattern readwrite #" ];
+          omitPasswordAuth = true;
           port = 9001;
           settings = {
             protocol = "websockets";
+            allow_anonymous = true;
           };
        }  
       ];

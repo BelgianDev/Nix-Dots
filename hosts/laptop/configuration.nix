@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, pkgs-unstable, ... }:
 
 {
   imports =
@@ -27,14 +27,20 @@
   module.app.mqtt.enable = true;
   module.app.gaming.steam.enable = true;
   module.app.gaming.minecraft.enable = true;
-  module.app.dev.c.enable = false;
+  module.app.dev.c.enable = true;
   module.app.dev.web.enable = true;
   module.app.virtualisation.boxes.enable = true;
   module.app.dev.python.enable = true;
 
+  boot.kernelParams = [ "button.lid_init_state=open" ];
+  services.logind.extraConfig = "HandleLidSwitch=ignore";
+
   # Forced Apps - Temporary
   environment.systemPackages = with pkgs; [
     vesktop
+    pkgs-unstable.responsively-app
+
+    whatsie
   ];
 
   # Set your time zone.

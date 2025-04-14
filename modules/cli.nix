@@ -11,6 +11,7 @@
     ffmpeg
     killall
     ipcalc
+    screen
 
     # Formatters
     nixfmt-rfc-style
