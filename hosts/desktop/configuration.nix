@@ -36,7 +36,7 @@
   # Apps
   module.app.mqtt.enable = true;
   module.app.aseprite.enable = true;
-  module.app.dev.c.enable = false;
+  module.app.dev.c.enable = true;
   module.app.dev.web.enable = true;
   module.app.gaming.steam.enable = true;
   module.app.gaming.suyu.enable = true;
@@ -45,7 +45,7 @@
   # Forced Apps - Temporary
   environment.systemPackages = with pkgs; [
     vesktop
-    whatsapp-for-linux
+    whatsie
 
     blockbench
     pinta
