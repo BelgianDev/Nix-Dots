@@ -11,7 +11,6 @@
     ./app/aseprite.nix
     ./app/bitwarden.nix
     ./app/teams.nix
-    ./app/wine.nix
     ./app/mqtt.nix
     ./app/dev/analysis.nix
     ./app/dev/java.nix
@@ -41,9 +40,8 @@
   # Apps
   module.app.bitwarden.enable = lib.mkDefault true;
   module.app.teams.enable = lib.mkDefault true;
-  module.app.wine.enable = lib.mkDefault true;
   module.app.dev.java.enable = lib.mkDefault true;
-  module.app.dev.rust.enable = lib.mkDefault true;
+  module.app.dev.rust.enable = lib.mkDefault false;
   module.app.dev.python.enable = lib.mkDefault false;
   module.app.dev.c.enable = lib.mkDefault false;
   module.app.dev.analysis.enable = lib.mkDefault true;
@@ -82,6 +80,7 @@
   
   # Other
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" "nixpkgs-unstable=${inputs.nixpkgs-unstable}" ];
+  boot.tmp.cleanOnBoot = true; # Makes system clean de temporary directory at each reboot.
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [

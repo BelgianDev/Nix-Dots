@@ -1,4 +1,4 @@
-{ config, lib, pkgs, inputs, ... }:
+{ config, lib, pkgs-unstable, inputs, ... }:
 
 with lib;
 
@@ -10,8 +10,8 @@ in {
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [
-      inputs.zen.packages."${system}".default
+    environment.systemPackages = with pkgs-unstable; [
+      inputs.zen.packages."${system}".beta
     ];
   };
 }

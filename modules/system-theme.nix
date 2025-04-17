@@ -40,7 +40,7 @@
     };
 
     monospace = {
-      package = pkgs.nerdfonts;
+      package = pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; };
       name = "JetBrains Mono Nerd Font";
     };
   };

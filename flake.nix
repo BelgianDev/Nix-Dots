@@ -23,7 +23,7 @@
     # Zen - Browser
     zen = {
       url = "github:0xc000022070/zen-browser-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
     # Spicetify
@@ -32,7 +32,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Suyu Switch Emulatord
+    # Suyu Switch Emulator
     suyu = {
       url = "github:Noodlez1232/suyu-flake";
       inputs.nixpkgs.follows = "nixpkgs";
