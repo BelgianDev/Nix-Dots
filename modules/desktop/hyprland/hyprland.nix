@@ -7,15 +7,15 @@ let
 in {
   options.module.desktop.gnome = {
     enable = mkEnableOption "Enables the Gnome Desktop Environment.";
-    wayland = mkEnableOption "Enables wayland on GDM and Gnome.";
-    gdm.enable = mkEnableOption "Enables GDM Display Manager.";
   };
 
   config = mkIf cfg.enable {
-    module.desktop.gdm = true; # Enable GDM
-
     services.xserver = {
       enable = true;
+
+      displayManager.gdm.enable = cfg.enable;
+      displayManager.gdm.wayland = cfg.wayland;
+
       desktopManager.gnome.enable = true;
     };
 
@@ -33,6 +33,8 @@ in {
       gnome-calculator
       gnome-screenshot
       gnome-disk-utility
+
+      libnotify
 
       baobab
       gnome-photos
