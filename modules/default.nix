@@ -33,9 +33,15 @@
     ./kernel/nvidia.nix
     ./kernel/graphics.nix
 
+    ./desktop/gdm.nix
     ./desktop/gnome.nix
+    ./desktop/hyprland
+
+
     ./service/bluetooth.nix
   ];
+
+  # Default
 
   # Apps
   module.app.bitwarden.enable = lib.mkDefault true;
@@ -53,18 +59,16 @@
   module.app.sftp.filezilla.enable = lib.mkDefault true;
   module.app.virtualisation.boxes.enable = lib.mkDefault false;
 
+  module.fonts.enable = lib.mkDefault true;
+
   # Containers
   module.container = {
     excalidraw.enable = lib.mkDefault false;
   };
 
   # Desktops
-  module.fonts.enable = lib.mkDefault true;
-  module.desktop.gnome = {
-    enable = lib.mkDefault true;
-    wayland = lib.mkDefault true;
-    gdm.enable = lib.mkDefault true;
-  };
+  module.desktop.gnome.enable = lib.mkDefault true;
+  module.desktop.gdm.enable = lib.mkDefault true;
 
   # Kernel Stuff
   module.kernel.unstable = lib.mkDefault false; # Shit may break.

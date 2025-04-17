@@ -1,8 +1,8 @@
 { pkgs, ... }: 
 
 {
-  stylix.enable = true;
-  stylix.autoEnable = true;
+  stylix.enable = false;
+  stylix.autoEnable = false;
 
   # Home Manager Integration
   stylix.homeManagerIntegration = {

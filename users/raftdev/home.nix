@@ -1,8 +1,9 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
     ./theme.nix
+    ./hyprland.nix
     ./../../home
   ];
 

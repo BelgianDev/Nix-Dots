@@ -7,12 +7,10 @@ let
 in {
   options.module.desktop.gnome = {
     enable = mkEnableOption "Enables the Gnome Desktop Environment.";
-    wayland = mkEnableOption "Enables wayland on GDM and Gnome.";
-    gdm.enable = mkEnableOption "Enables GDM Display Manager.";
   };
 
   config = mkIf cfg.enable {
-    module.desktop.gdm = true; # Enable GDM
+    module.desktop.gdm.enable = true; # Enable GDM
 
     services.xserver = {
       enable = true;

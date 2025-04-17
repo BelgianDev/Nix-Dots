@@ -42,6 +42,9 @@
   module.app.gaming.suyu.enable = true;
   module.app.virtualisation.boxes.enable = true;
 
+  # Desktop
+  module.desktop.hyprland.enable = true;
+
   # Forced Apps - Temporary
   environment.systemPackages = with pkgs; [
     vesktop
