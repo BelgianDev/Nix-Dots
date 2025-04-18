@@ -21,6 +21,10 @@ in {
 
     environment.systemPackages = with pkgs; [
       rofi
+      swaynotificationcenter
+      waybar
+
+      pkgs-unstable.hyprpolkitagent
       pkgs-unstable.hyprpaper
     ];
   };

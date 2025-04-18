@@ -1,8 +1,15 @@
-{ ... }:
+{ pkgs-unstable, ... }:
 
 {
   wayland.windowManager.hyprland = { 
     enable = true;
+
+    package = pkgs-unstable.hyprland;
+
+    plugins = with pkgs-unstable.hyprlandPlugins; [
+      hyprsplit
+    ];
+
     settings = {
       input = {
         kb_layout = "be";
@@ -17,7 +24,6 @@
         "HDMI-A-1, preferred, 1920x0, 1"
         "eDP-1, preferred, 0x0, 1"
       ];
-
 
       # Keybinds
       "$main" = "SUPER";
@@ -48,6 +54,9 @@
 
       exec-once = [
         "hyprpaper"
+        "swaync"
+        "systemctl --user start hyprpolkitagent"
+        "waybar"
       ];
 
       # Styling
@@ -62,12 +71,11 @@
         layout = "dwindle";
       };
 
-
       decoration = {
         rounding = 10;
 
         active_opacity = 0.98;
-        inactive_opacity = 0.8;
+        inactive_opacity = 0.95;
 
         shadow = {
           enabled = true;
