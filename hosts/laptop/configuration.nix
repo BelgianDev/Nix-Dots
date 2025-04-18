@@ -32,6 +32,9 @@
   module.app.virtualisation.boxes.enable = true;
   module.app.dev.python.enable = true;
 
+  # Desktop
+  module.desktop.hyprland.enable = true;
+
   boot.kernelParams = [ "button.lid_init_state=open" ];
   services.logind.extraConfig = "HandleLidSwitch=ignore";
 

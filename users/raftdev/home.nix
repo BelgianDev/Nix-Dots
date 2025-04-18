@@ -3,7 +3,7 @@
 {
   imports = [
     ./theme.nix
-    ./hyprland.nix
+    ./hyprland
     ./../../home
   ];
 
