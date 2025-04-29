@@ -19,6 +19,7 @@
     ./app/dev/docker.nix
     ./app/dev/c.nix
     ./app/dev/web.nix
+    ./app/browser/firefox.nix
     ./app/browser/zen.nix
     ./app/gaming/steam.nix
     ./app/gaming/minecraft.nix
@@ -47,6 +48,7 @@
   module.app.dev.analysis.enable = lib.mkDefault true;
   module.app.dev.docker.enable = lib.mkDefault true;
   module.app.browser.zen.enable = lib.mkDefault true;
+  module.app.browser.firefox.enable = lib.mkDefault true;
   module.app.gaming.steam.enable = lib.mkDefault false;
   module.app.gaming.minecraft.enable = lib.mkDefault true;
   module.app.gaming.suyu.enable = lib.mkDefault false;

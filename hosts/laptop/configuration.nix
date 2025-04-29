@@ -29,8 +29,9 @@
   module.app.gaming.minecraft.enable = true;
   module.app.dev.c.enable = true;
   module.app.dev.web.enable = true;
-  module.app.virtualisation.boxes.enable = true;
   module.app.dev.python.enable = true;
+  module.app.dev.rust.enable = true;
+  module.app.virtualisation.boxes.enable = true;
 
   boot.kernelParams = [ "button.lid_init_state=open" ];
   services.logind.extraConfig = "HandleLidSwitch=ignore";

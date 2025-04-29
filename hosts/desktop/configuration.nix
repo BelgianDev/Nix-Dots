@@ -49,8 +49,6 @@
 
     blockbench
     pinta
-
-    firefox
   ];
 
   # Set your time zone.
