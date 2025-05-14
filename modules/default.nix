@@ -10,6 +10,7 @@
 
     ./app/aseprite.nix
     ./app/bitwarden.nix
+    ./app/obisidian.nix
     ./app/teams.nix
     ./app/mqtt.nix
     ./app/dev/analysis.nix
@@ -41,6 +42,7 @@
   # Apps
   module.app.bitwarden.enable = lib.mkDefault true;
   module.app.teams.enable = lib.mkDefault true;
+  module.app.obsidian.enable = lib.mkDefault true;
   module.app.dev.java.enable = lib.mkDefault true;
   module.app.dev.rust.enable = lib.mkDefault false;
   module.app.dev.python.enable = lib.mkDefault false;
