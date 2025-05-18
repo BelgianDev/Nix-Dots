@@ -1,4 +1,4 @@
-{ config, lib, pkgs-unstable, ... }:
+{ config, lib, pkgs-unstable, pkgs, ... }:
 
 with lib;
 
@@ -10,8 +10,8 @@ in {
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs-unstable; [
-      jetbrains.webstorm
+    environment.systemPackages = with pkgs; [
+      pkgs-unstable.jetbrains.webstorm
       nodejs_23
     ];
   };

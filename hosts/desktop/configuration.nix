@@ -39,7 +39,6 @@
   module.app.dev.c.enable = true;
   module.app.dev.web.enable = true;
   module.app.gaming.steam.enable = true;
-  module.app.gaming.suyu.enable = true;
   module.app.virtualisation.boxes.enable = true;
 
   # Desktop

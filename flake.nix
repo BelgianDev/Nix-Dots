@@ -31,12 +31,6 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # Suyu Switch Emulator
-    suyu = {
-      url = "github:Noodlez1232/suyu-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = { nixpkgs, nixpkgs-unstable, stylix, sops, ... }@inputs: 
