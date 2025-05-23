@@ -1,4 +1,4 @@
-{ config, lib, pkgs, pkgs-unstable, ... }:
+{ config, lib, pkgs, ... }:
 
 with lib;
 
@@ -12,20 +12,15 @@ in {
   config = mkIf cfg.enable {
     module.desktop.gdm.enable = true; # Enable GDM
 
-    programs.hyprland = {
-      enable = true;
-
-      package = pkgs-unstable.hyprland;
-      portalPackage = pkgs-unstable.xdg-desktop-portal-hyprland;
-    };
+    programs.hyprland.enable = true;
 
     environment.systemPackages = with pkgs; [
       rofi
       swaynotificationcenter
       waybar
 
-      pkgs-unstable.hyprpolkitagent
-      pkgs-unstable.hyprpaper
+      pkgs.hyprpolkitagent
+      pkgs.hyprpaper
     ];
   };
 }

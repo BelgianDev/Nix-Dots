@@ -12,7 +12,7 @@ in {
   config = mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
       pkgs-unstable.jetbrains.webstorm
-      nodejs_23
+      nodejs
     ];
   };
 }
