@@ -8,10 +8,7 @@
     ./network.nix
     ./system-theme.nix
 
-    ./app/aseprite.nix
     ./app/bitwarden.nix
-    ./app/teams.nix
-    ./app/mqtt.nix
     ./app/dev/analysis.nix
     ./app/dev/java.nix
     ./app/dev/python.nix
@@ -19,13 +16,17 @@
     ./app/dev/docker.nix
     ./app/dev/c.nix
     ./app/dev/web.nix
+    ./app/browser/firefox.nix
     ./app/browser/zen.nix
+    ./app/chat/discord.nix
+    ./app/chat/whatsapp.nix
+    ./app/chat/teams.nix
+    ./app/creation/aseprite.nix
+    ./app/creation/blockbench.nix
     ./app/gaming/steam.nix
     ./app/gaming/minecraft.nix
     ./app/sftp/filezilla.nix
     ./app/virtualization/boxes.nix
-
-    ./container/excalidraw.nix
 
     ./kernel/controller.nix
     ./kernel/kernel.nix
@@ -36,51 +37,66 @@
     ./desktop/gnome.nix
     ./desktop/hyprland
 
-
     ./service/bluetooth.nix
   ];
 
   # Default
 
   # Apps
-  module.app.bitwarden.enable = lib.mkDefault true;
-  module.app.teams.enable = lib.mkDefault true;
-  module.app.dev.java.enable = lib.mkDefault true;
-  module.app.dev.rust.enable = lib.mkDefault false;
-  module.app.dev.python.enable = lib.mkDefault false;
-  module.app.dev.c.enable = lib.mkDefault false;
-  module.app.dev.analysis.enable = lib.mkDefault true;
-  module.app.dev.docker.enable = lib.mkDefault true;
-  module.app.browser.zen.enable = lib.mkDefault true;
-  module.app.gaming.steam.enable = lib.mkDefault false;
-  module.app.gaming.minecraft.enable = lib.mkDefault true;
-  module.app.sftp.filezilla.enable = lib.mkDefault true;
-  module.app.virtualisation.boxes.enable = lib.mkDefault false;
+  module.app = {
+    bitwarden.enable = lib.mkDefault true;
+    sftp.filezilla.enable = lib.mkDefault true;
+    virtualisation.boxes.enable = lib.mkDefault false;
+    
+    dev = {
+      java.enable = lib.mkDefault true;
+      rust.enable = lib.mkDefault false;
+      python.enable = lib.mkDefault false;
+      c.enable = lib.mkDefault true;
+
+      analysis.enable = lib.mkDefault false;
+      docker.enable = lib.mkDefault true;
+    };
+
+    browser = {
+      zen.enable = lib.mkDefault false;
+      firefox.enable = lib.mkDefault true;
+    };
+
+    creation = {
+      aseprite.enable = lib.mkDefault false;
+      blockbench.enable = lib.mkDefault false;
+    };
+
+    chat = {
+      teams.enable = lib.mkDefault true;
+      discord.enable = lib.mkDefault true;
+      whatsapp.enable = lib.mkDefault true;
+    };
+  };
 
   module.fonts.enable = lib.mkDefault true;
-
-  # Containers
-  module.container = {
-    excalidraw.enable = lib.mkDefault false;
-  };
 
   # Desktops
   module.desktop.gnome.enable = lib.mkDefault true;
   module.desktop.gdm.enable = lib.mkDefault true;
 
   # Kernel Stuff
-  module.kernel.unstable = lib.mkDefault false; # Shit may break.
-  module.kernel.controller.enable = lib.mkDefault true;
-  module.kernel.nvidia = {
-    enable = lib.mkDefault false;
-    open = lib.mkDefault false;
-    settings = lib.mkDefault true;
+  module.kernel = {
+    unstable = lib.mkDefault false;
+    controller.enable = lib.mkDefault true;
+
+    nvidia = {
+      enable = lib.mkDefault false;
+      open = lib.mkDefault false;
+      settings = lib.mkDefault true;
+    };
   };
 
   # Services
   module.service.bluetooth.enable = lib.mkDefault true;
   
-  # Needed Apps
+  # Required Programs
   environment.systemPackages = with pkgs; [
     libnotify
   ];

@@ -49,7 +49,7 @@
 
         # Programs
         "Super, R, exec, alacritty"
-        "Super, W, exec, zen"
+        "Super, W, exec, firefox"
       ];
 
       exec-once = [

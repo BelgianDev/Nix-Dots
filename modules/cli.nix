@@ -59,8 +59,6 @@
     htop
     btop
     mtr
-    iotop
-    iftop
 
     # Java
     pkgs-unstable.jdk23

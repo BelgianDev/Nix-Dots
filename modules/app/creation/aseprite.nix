@@ -3,9 +3,9 @@
 with lib;
 
 let
-  cfg = config.module.app.aseprite;
+  cfg = config.module.app.creation.aseprite;
 in {
-  options.module.app.aseprite = {
+  options.module.app.creation.aseprite = {
     enable = mkEnableOption "Enable aseprite.";
   };
 

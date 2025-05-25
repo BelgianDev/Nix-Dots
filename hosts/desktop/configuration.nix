@@ -34,7 +34,6 @@
   networking.networkmanager.enable = true;
 
   # Apps
-  module.app.mqtt.enable = true;
   module.app.aseprite.enable = true;
   module.app.dev.c.enable = true;
   module.app.dev.web.enable = true;
@@ -43,15 +42,6 @@
 
   # Desktop
   module.desktop.hyprland.enable = true;
-
-  # Forced Apps - Temporary
-  environment.systemPackages = with pkgs; [
-    vesktop
-    whatsie
-
-    blockbench
-    pinta
-  ];
 
   # Set your time zone.
   time.timeZone = "Europe/Brussels";
