@@ -34,7 +34,6 @@
   networking.networkmanager.enable = true;
 
   # Apps
-  module.app.aseprite.enable = true;
   module.app.dev.c.enable = true;
   module.app.dev.web.enable = true;
   module.app.gaming.steam.enable = true;

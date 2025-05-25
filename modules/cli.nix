@@ -74,5 +74,6 @@
     cbonsai
     pfetch-rs
     fastfetch
+    cava
   ];
 }
