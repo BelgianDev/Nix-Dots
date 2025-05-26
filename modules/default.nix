@@ -50,12 +50,18 @@
     
     dev = {
       java.enable = lib.mkDefault true;
+      web.enable = lib.mkDefault true;
       rust.enable = lib.mkDefault false;
       python.enable = lib.mkDefault false;
-      c.enable = lib.mkDefault true;
+      c.enable = lib.mkDefault false;
 
       analysis.enable = lib.mkDefault false;
       docker.enable = lib.mkDefault true;
+    };
+
+    gaming = {
+      minecraft.enable = lib.mkDefault true;
+      steam.enable = lib.mkDefault false;
     };
 
     browser = {
@@ -78,8 +84,12 @@
   module.fonts.enable = lib.mkDefault true;
 
   # Desktops
-  module.desktop.gnome.enable = lib.mkDefault true;
-  module.desktop.gdm.enable = lib.mkDefault true;
+  module.desktop = {
+    gdm.enable = lib.mkDefault true;
+
+    gnome.enable = lib.mkDefault true;
+    hyprland.enable = lib.mkDefault true; # Backup DE
+  };
 
   # Kernel Stuff
   module.kernel = {

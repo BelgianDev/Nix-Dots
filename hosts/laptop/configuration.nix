@@ -24,12 +24,8 @@
   networking.networkmanager.enable = true;
 
   # Apps
-  module.app.gaming.steam.enable = true;
   module.app.gaming.minecraft.enable = true;
-  module.app.dev.c.enable = true;
-  module.app.dev.web.enable = true;
   module.app.virtualisation.boxes.enable = true;
-  module.app.dev.python.enable = true;
 
   # Desktop
   module.desktop.hyprland.enable = true;

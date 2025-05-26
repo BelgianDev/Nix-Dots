@@ -20,8 +20,6 @@ in {
           framerate = 60;
           overshoot = 0;
         };
-
-        smoothing.noise_reduction = 100;
       };
     };
   };
