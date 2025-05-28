@@ -29,6 +29,7 @@
     ./app/virtualization/boxes.nix
 
     ./kernel/controller.nix
+    ./kernel/firmware.nix
     ./kernel/kernel.nix
     ./kernel/nvidia.nix
     ./kernel/graphics.nix
