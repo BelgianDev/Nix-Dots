@@ -28,8 +28,11 @@
     ./app/sftp/filezilla.nix
     ./app/virtualization/boxes.nix
 
+    ./hardware/firmware.nix
+    ./hardware/ssd.nix
+    ./hardware/thermal.nix
+
     ./kernel/controller.nix
-    ./kernel/firmware.nix
     ./kernel/kernel.nix
     ./kernel/nvidia.nix
     ./kernel/graphics.nix
@@ -80,6 +83,11 @@
       discord.enable = lib.mkDefault true;
       whatsapp.enable = lib.mkDefault true;
     };
+  };
+
+  module.hardware = {
+    ssd.enable = lib.mkDefault true;
+    thermal.enable = lib.mkDefault false;
   };
 
   module.fonts.enable = lib.mkDefault true;

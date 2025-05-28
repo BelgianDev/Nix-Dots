@@ -21,6 +21,9 @@
   networking.firewall.enable = true;
   networking.networkmanager.enable = true;
 
+  # Hardware
+  module.hardware.thermal.enable = true;
+
   # Apps
   module.app.gaming.minecraft.enable = true;
   module.app.virtualisation.boxes.enable = true;
