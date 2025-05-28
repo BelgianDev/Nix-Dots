@@ -34,6 +34,7 @@
   networking.networkmanager.enable = true;
 
   # Apps
+  module.app.creation.aseprite.enable = true;
   module.app.gaming.steam.enable = true;
   module.app.virtualisation.boxes.enable = true;
 
