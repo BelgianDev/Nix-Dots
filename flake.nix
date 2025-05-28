@@ -40,7 +40,8 @@
       # base modules that will commonly be used by all systems
       baseModules = [
         ./modules/overlays.nix 
-        ./modules/default.nix
+        ./modules
+        ./users
 
         stylix.nixosModules.stylix
         sops.nixosModules.sops
