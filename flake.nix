@@ -61,6 +61,8 @@
       nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
         inherit system;
         
+       specialArgs = { inherit inputs; };
+
         modules = baseModules ++ [
           ./hosts/laptop/configuration.nix
         ];
