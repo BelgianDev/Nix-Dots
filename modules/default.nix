@@ -112,7 +112,6 @@
   ];
 
   # Other
-  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" "nixpkgs-unstable=${inputs.nixpkgs-unstable}" ];
   boot.tmp.cleanOnBoot = true; # Makes system clean de temporary directory at each reboot.
 
   programs.nix-ld.enable = true;

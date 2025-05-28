@@ -1,4 +1,4 @@
-{ pkgs, pkgs-unstable, ... }:
+{ pkgs, ... }:
 
 {
   programs.fish.enable = true;
@@ -61,10 +61,10 @@
     mtr
 
     # Java
-    pkgs-unstable.jdk23
-    pkgs-unstable.jdk21
-    pkgs-unstable.jdk17
-    pkgs-unstable.jdk8
+    pkgs.unstable.jdk23
+    pkgs.unstable.jdk21
+    pkgs.unstable.jdk17
+    pkgs.unstable.jdk8
 
     # Funny Stuff
     pipes-rs

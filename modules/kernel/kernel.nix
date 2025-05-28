@@ -1,4 +1,4 @@
-{ config, lib, pkgs-unstable, ... }:
+{ config, lib, pkgs, ... }:
 
 with lib;
 
@@ -10,6 +10,6 @@ in {
   };
 
   config = mkIf cfg.unstable {
-    boot.kernelPackages = pkgs-unstable.linuxPackages;
+    boot.kernelPackages = pkgs.unstable.linuxPackages;
   };
 }

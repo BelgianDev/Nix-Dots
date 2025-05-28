@@ -1,4 +1,4 @@
-{ inputs, pkgs, pkgs-unstable, ... }:
+{ inputs, pkgs, ... }:
 
 {
   imports = [
@@ -13,7 +13,7 @@
   };
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs pkgs pkgs-unstable; };
+    extraSpecialArgs = { inherit inputs pkgs; };
     users."raftdev" = import ./home.nix;
   };
 }

@@ -1,4 +1,4 @@
-{ config, lib, pkgs-unstable, ... }:
+{ config, lib, pkgs, ... }:
 
 with lib;
 
@@ -10,8 +10,8 @@ in {
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs-unstable; [
-      jetbrains.rust-rover
+    environment.systemPackages = with pkgs; [
+      unstable.jetbrains.rust-rover
 
       rustup
       rustc
