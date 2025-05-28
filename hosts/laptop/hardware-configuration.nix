@@ -13,8 +13,6 @@
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
-  hardware.cpu.intel.updateMicrocode = true;
-
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/045c4767-39ab-4e85-bdc1-7d10cb1afe59";
       fsType = "ext4";
