@@ -33,4 +33,7 @@
 
   # Shells
   home.shell.fish.enable = lib.mkDefault true; # Fish
+
+  # Services
+  # services.mpris-proxy.enable = lib.mkDefault true; - BROKEN: https://github.com/nix-community/home-manager/issues/7164
 }
