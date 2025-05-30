@@ -25,8 +25,11 @@
   module.hardware.thermal.enable = true;
 
   # Apps
-  module.app.gaming.minecraft.enable = true;
-  module.app.virtualisation.boxes.enable = true;
+  module.app = {
+    gaming.steam.enable = true;
+    virtualisation.boxes.enable = true;
+    dev.python.enable = true;
+  };
 
   # Desktop
   module.desktop.hyprland.enable = true;

@@ -9,6 +9,7 @@
     ./system-theme.nix
 
     ./app/bitwarden.nix
+    ./app/obsidian.nix
     ./app/dev/analysis.nix
     ./app/dev/java.nix
     ./app/dev/python.nix
@@ -49,6 +50,8 @@
   # Apps
   module.app = {
     bitwarden.enable = lib.mkDefault true;
+    obsidian.enable = lib.mkDefault true;
+
     sftp.filezilla.enable = lib.mkDefault true;
     virtualisation.boxes.enable = lib.mkDefault false;
     
