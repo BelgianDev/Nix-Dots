@@ -36,6 +36,7 @@
     ./kernel/controller.nix
     ./kernel/kernel.nix
     ./kernel/nvidia.nix
+    ./kernel/intel.nix
     ./kernel/graphics.nix
 
     ./desktop/gdm.nix
@@ -108,6 +109,7 @@
     unstable = lib.mkDefault false;
     controller.enable = lib.mkDefault true;
 
+    intel.enable = lib.mkDefault false;
     nvidia = {
       enable = lib.mkDefault false;
       open = lib.mkDefault false;

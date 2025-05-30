@@ -23,6 +23,7 @@
 
   # Hardware
   module.hardware.thermal.enable = true;
+  module.kernel.intel.enable = true;
 
   # Apps
   module.app = {
