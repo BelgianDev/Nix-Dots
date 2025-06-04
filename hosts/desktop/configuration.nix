@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   imports =
@@ -8,6 +8,12 @@
   
   # Enable Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  environment.systemPackages = [
+    (pkgs.callPackage ./../../pkgs/crafted-launcher-legacy.nix {})
+  ];
+
+  module.wine.enable = true;
 
   # Kernel Stuff
   module.kernel = {

@@ -3,6 +3,7 @@
 {
   imports = [
     ./cli.nix
+    ./wine.nix
     ./fonts.nix
     ./secrets.nix
     ./network.nix
@@ -61,7 +62,7 @@
       web.enable = lib.mkDefault true;
       rust.enable = lib.mkDefault false;
       python.enable = lib.mkDefault false;
-      c.enable = lib.mkDefault false;
+      c.enable = lib.mkDefault true;
 
       analysis.enable = lib.mkDefault false;
       docker.enable = lib.mkDefault true;
@@ -94,6 +95,7 @@
     thermal.enable = lib.mkDefault false;
   };
 
+  module.wine.enable = lib.mkDefault false;
   module.fonts.enable = lib.mkDefault true;
 
   # Desktops

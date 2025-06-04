@@ -12,15 +12,9 @@ in {
   config = mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
       unstable.jetbrains.clion
-
-      gcc
-      meson
-
-      cmake
-      ninja
-      dfu-util
-
-      arduino-ide
+      platformio-core
     ];
+
+    services.udev.packages = with pkgs; [ platformio-core.udev];
   };
 }
