@@ -29,7 +29,6 @@
   module.app = {
     gaming.steam.enable = true;
     virtualisation.boxes.enable = true;
-    dev.python.enable = true;
   };
 
   # Desktop
