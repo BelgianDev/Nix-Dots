@@ -18,7 +18,7 @@
 
   # Network
   networking.hostName = "Raft-Laptop"; 
-  networking.firewall.enable = true;
+  networking.firewall.enable = false;
   networking.networkmanager.enable = true;
 
   # Hardware
