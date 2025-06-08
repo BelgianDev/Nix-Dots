@@ -12,6 +12,7 @@ in {
   config = mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
       prismlauncher
+      (pkgs.callPackage ./../../../pkgs/crafted-launcher-legacy.nix {}) # Custom Launcher
     ];
   };
 }
