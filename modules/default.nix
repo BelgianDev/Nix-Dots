@@ -42,7 +42,6 @@
 
     ./desktop/gdm.nix
     ./desktop/gnome.nix
-    ./desktop/hyprland
 
     ./service/bluetooth.nix
   ];
@@ -103,7 +102,6 @@
     gdm.enable = lib.mkDefault true;
 
     gnome.enable = lib.mkDefault true;
-    hyprland.enable = lib.mkDefault true; # Backup DE
   };
 
   # Kernel Stuff

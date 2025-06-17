@@ -11,7 +11,6 @@
     ./cli/btop.nix
     ./cli/cava.nix
 
-    ./desktop/hyprland.nix
     ./desktop/gnome.nix
     
     ./shell/fish.nix
@@ -29,7 +28,6 @@
 
   # Desktop
   home.desktop.gnome.enable = lib.mkDefault true;
-  home.desktop.hyprland.enable = lib.mkDefault true; # Main Desktop
 
   # Shells
   home.shell.fish.enable = lib.mkDefault true; # Fish

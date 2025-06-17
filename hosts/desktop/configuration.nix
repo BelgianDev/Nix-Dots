@@ -38,9 +38,6 @@
   module.app.gaming.steam.enable = true;
   module.app.virtualisation.boxes.enable = true;
 
-  # Desktop
-  module.desktop.hyprland.enable = true;
-
   # Set your time zone.
   time.timeZone = "Europe/Brussels";
 
