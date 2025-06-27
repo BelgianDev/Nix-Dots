@@ -5,6 +5,7 @@
     ./cli.nix
     ./wine.nix
     ./fonts.nix
+    ./localisation.nix
     ./secrets.nix
     ./network.nix
     ./system-theme.nix
