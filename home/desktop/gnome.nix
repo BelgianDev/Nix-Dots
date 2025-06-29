@@ -181,6 +181,7 @@ in {
         { package = vitals; }
         { package = forge; }
         { package = no-title-bar; }
+        { package = gnome-40-ui-improvements; }
       ];
     };
   };
