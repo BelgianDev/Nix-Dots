@@ -29,6 +29,7 @@
     ./app/creation/blockbench.nix
     ./app/gaming/steam.nix
     ./app/gaming/minecraft.nix
+    ./app/gaming/switch.nix
     ./app/sftp/filezilla.nix
     ./app/virtualization/boxes.nix
 
@@ -73,6 +74,7 @@
     gaming = {
       minecraft.enable = lib.mkDefault true;
       steam.enable = lib.mkDefault false;
+      switch.enable = lib.mkDefault false;
     };
 
     browser = {
