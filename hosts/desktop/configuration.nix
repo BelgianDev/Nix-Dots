@@ -10,6 +10,7 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   
   module.wine.enable = true;
+  module.tool.android.enable = true;
 
   # Kernel Stuff
   module.kernel = {

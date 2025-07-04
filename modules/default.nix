@@ -47,9 +47,14 @@
     ./desktop/gnome.nix
 
     ./service/bluetooth.nix
+
+    ./tool/android.nix
   ];
 
   # Default
+
+  # Tools
+  module.tool.android.enable = lib.mkDefault false;
 
   # Apps
   module.app = {
