@@ -3,16 +3,16 @@
 {
   imports = [
     ./cli.nix
+    ./wine.nix
     ./fonts.nix
+    ./localisation.nix
     ./secrets.nix
     ./network.nix
     ./system-theme.nix
 
-    ./app/aseprite.nix
     ./app/bitwarden.nix
-    ./app/obisidian.nix
-    ./app/teams.nix
-    ./app/mqtt.nix
+    ./app/obsidian.nix
+    ./app/vlc.nix
     ./app/dev/analysis.nix
     ./app/dev/java.nix
     ./app/dev/python.nix
@@ -22,68 +22,120 @@
     ./app/dev/web.nix
     ./app/browser/firefox.nix
     ./app/browser/zen.nix
+    ./app/chat/discord.nix
+    ./app/chat/whatsapp.nix
+    ./app/chat/teams.nix
+    ./app/creation/aseprite.nix
+    ./app/creation/blockbench.nix
     ./app/gaming/steam.nix
     ./app/gaming/minecraft.nix
-    ./app/gaming/suyu.nix
+    ./app/gaming/switch.nix
     ./app/sftp/filezilla.nix
     ./app/virtualization/boxes.nix
 
-    ./container/excalidraw.nix
+    ./hardware/firmware.nix
+    ./hardware/ssd.nix
+    ./hardware/thermal.nix
 
     ./kernel/controller.nix
     ./kernel/kernel.nix
     ./kernel/nvidia.nix
+    ./kernel/intel.nix
     ./kernel/graphics.nix
 
+    ./desktop/gdm.nix
     ./desktop/gnome.nix
+
     ./service/bluetooth.nix
+
+    ./tool/android.nix
   ];
 
-  # Apps
-  module.app.bitwarden.enable = lib.mkDefault true;
-  module.app.teams.enable = lib.mkDefault true;
-  module.app.obsidian.enable = lib.mkDefault true;
-  module.app.dev.java.enable = lib.mkDefault true;
-  module.app.dev.rust.enable = lib.mkDefault false;
-  module.app.dev.python.enable = lib.mkDefault false;
-  module.app.dev.c.enable = lib.mkDefault false;
-  module.app.dev.analysis.enable = lib.mkDefault true;
-  module.app.dev.docker.enable = lib.mkDefault true;
-  module.app.browser.zen.enable = lib.mkDefault true;
-  module.app.browser.firefox.enable = lib.mkDefault true;
-  module.app.gaming.steam.enable = lib.mkDefault false;
-  module.app.gaming.minecraft.enable = lib.mkDefault true;
-  module.app.gaming.suyu.enable = lib.mkDefault false;
-  module.app.sftp.filezilla.enable = lib.mkDefault true;
-  module.app.virtualisation.boxes.enable = lib.mkDefault false;
+  # Default
 
-  # Containers
-  module.container = {
-    excalidraw.enable = lib.mkDefault false;
+  # Tools
+  module.tool.android.enable = lib.mkDefault false;
+
+  # Apps
+  module.app = {
+    bitwarden.enable = lib.mkDefault true;
+    obsidian.enable = lib.mkDefault true;
+    vlc.enable = lib.mkDefault true;
+
+    sftp.filezilla.enable = lib.mkDefault true;
+    virtualisation.boxes.enable = lib.mkDefault false;
+    
+    dev = {
+      java.enable = lib.mkDefault true;
+      web.enable = lib.mkDefault true;
+      rust.enable = lib.mkDefault false;
+      python.enable = lib.mkDefault false;
+      c.enable = lib.mkDefault true;
+
+      analysis.enable = lib.mkDefault false;
+      docker.enable = lib.mkDefault true;
+    };
+
+    gaming = {
+      minecraft.enable = lib.mkDefault true;
+      steam.enable = lib.mkDefault false;
+      switch.enable = lib.mkDefault false;
+    };
+
+    browser = {
+      zen.enable = lib.mkDefault false;
+      firefox.enable = lib.mkDefault true;
+    };
+
+    creation = {
+      aseprite.enable = lib.mkDefault false;
+      blockbench.enable = lib.mkDefault false;
+    };
+
+    chat = {
+      teams.enable = lib.mkDefault true;
+      discord.enable = lib.mkDefault true;
+      whatsapp.enable = lib.mkDefault true;
+    };
   };
 
-  # Desktops
+  module.hardware = {
+    ssd.enable = lib.mkDefault true;
+    thermal.enable = lib.mkDefault false;
+  };
+
+  module.wine.enable = lib.mkDefault false;
   module.fonts.enable = lib.mkDefault true;
-  module.desktop.gnome = {
-    enable = lib.mkDefault true;
-    wayland = lib.mkDefault true;
+
+  # Desktops
+  module.desktop = {
     gdm.enable = lib.mkDefault true;
+
+    gnome.enable = lib.mkDefault true;
   };
 
   # Kernel Stuff
-  module.kernel.unstable = lib.mkDefault false; # Shit may break.
-  module.kernel.controller.enable = lib.mkDefault true;
-  module.kernel.nvidia = {
-    enable = lib.mkDefault false;
-    open = lib.mkDefault false;
-    settings = lib.mkDefault true;
+  module.kernel = {
+    unstable = lib.mkDefault false;
+    controller.enable = lib.mkDefault true;
+
+    intel.enable = lib.mkDefault false;
+    nvidia = {
+      enable = lib.mkDefault false;
+      open = lib.mkDefault false;
+      settings = lib.mkDefault true;
+    };
   };
 
   # Services
   module.service.bluetooth.enable = lib.mkDefault true;
   
+  # Required Programs
+  environment.systemPackages = with pkgs; [
+    libnotify
+  ];
+
   # Other
-  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" "nixpkgs-unstable=${inputs.nixpkgs-unstable}" ];
   boot.tmp.cleanOnBoot = true; # Makes system clean de temporary directory at each reboot.
 
   programs.nix-ld.enable = true;

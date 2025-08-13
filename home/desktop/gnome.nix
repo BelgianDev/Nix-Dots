@@ -1,4 +1,4 @@
-{ config, lib, pkgs, pkgs-unstable, ... }:
+{ config, lib, pkgs, ... }:
 
 with lib;
 
@@ -176,11 +176,12 @@ in {
 
     programs.gnome-shell = {
       enable = true;
-      extensions = with pkgs-unstable.gnomeExtensions; [
+      extensions = with pkgs.unstable.gnomeExtensions; [
         { package = blur-my-shell; }
         { package = vitals; }
         { package = forge; }
         { package = no-title-bar; }
+        { package = gnome-40-ui-improvements; }
       ];
     };
   };

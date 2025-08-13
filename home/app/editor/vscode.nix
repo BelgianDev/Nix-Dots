@@ -12,24 +12,27 @@ in {
   config = mkIf cfg.enable {
     programs.vscode = {
       enable = true;
-      enableUpdateCheck = false; # Fuck off update popups
       package = pkgs.vscodium;
-      extensions = with pkgs.vscode-extensions; [
-        jnoortheen.nix-ide
-      ];
 
-      userSettings = {
-        "files.autoSave" = "onFocusChange";
-        "git.confirmSync" = false;
+      profiles.default = {
+        enableUpdateCheck = false; # Fuck off update popups
+        extensions = with pkgs.vscode-extensions; [
+          jnoortheen.nix-ide
+        ];
 
-        # Editor LSP
-        "nix.serverPath" = "nixd";
-        "nix.enableLanguageServer" = true;
-        "formatting" = {
-          "command" = [ "nixfmt" ];
-        };
-        "nixpkgs" = {
-          "expr" = "import <nixpkgs> { }";
+        userSettings = {
+          "files.autoSave" = "onFocusChange";
+          "git.confirmSync" = false;
+
+          # Editor LSP
+          "nix.serverPath" = "nixd";
+          "nix.enableLanguageServer" = true;
+          "formatting" = {
+            "command" = [ "nixfmt" ];
+          };
+          "nixpkgs" = {
+            "expr" = "import <nixpkgs> { }";
+          };
         };
       };
     };

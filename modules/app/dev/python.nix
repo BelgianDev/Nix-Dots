@@ -1,4 +1,4 @@
-{ config, lib, pkgs-unstable, ... }:
+{ config, lib, pkgs, ... }:
 
 with lib;
 
@@ -10,8 +10,8 @@ in {
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs-unstable; [
-      jetbrains.pycharm-professional
+    environment.systemPackages = with pkgs; [
+      unstable.jetbrains.pycharm-professional
       python3Full
     ];
   };

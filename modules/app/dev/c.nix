@@ -1,4 +1,4 @@
-{ config, lib, pkgs, pkgs-unstable, ... }:
+{ config, lib, pkgs, ... }:
 
 with lib;
 
@@ -11,16 +11,10 @@ in {
 
   config = mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
-      pkgs-unstable.jetbrains.clion
-
-      gcc
-      meson
-
-      cmake
-      ninja
-      dfu-util
-
-      arduino-ide
+      unstable.jetbrains.clion
+      platformio-core
     ];
+
+    services.udev.packages = with pkgs; [ platformio-core.udev];
   };
 }

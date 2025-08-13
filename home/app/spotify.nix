@@ -1,4 +1,4 @@
-{ config, lib, pkgs, pkgs-unstable, inputs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 with lib;
 
@@ -25,16 +25,7 @@ in {
 
       enabledExtensions = with spicePkgs.extensions; [
         adblock
-        shuffle
-        fullAppDisplay
         trashbin
-
-        copyToClipboard
-        powerBar
-        fullAlbumDate
-        history
-        betterGenres
-        playingSource
         oneko
       ];
     };

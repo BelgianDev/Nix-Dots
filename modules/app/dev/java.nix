@@ -1,4 +1,4 @@
-{ config, lib, pkgs-unstable, ... }:
+{ config, lib, pkgs, ... }:
 
 with lib;
 
@@ -10,9 +10,13 @@ in {
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs-unstable; [
-      jetbrains.idea-ultimate
+    environment.systemPackages = with pkgs; [
+      unstable.jetbrains.idea-ultimate
       visualvm
     ];
+
+    # Enable perf as user - Intelij
+    boot.kernel.sysctl."kernel.perf_event_paranoid" = -1;
+    boot.kernel.sysctl."kernel.kptr_restrict" = lib.mkForce 0;
   };
 }

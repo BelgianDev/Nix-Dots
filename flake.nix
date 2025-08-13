@@ -2,11 +2,11 @@
   description = "RaftDev's Configuration Flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.11";
+      url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -16,7 +16,7 @@
     };
 
     stylix = {
-      url = "github:danth/stylix/release-24.11"; # Regreet breaks shit
+      url = "github:danth/stylix/release-25.05"; 
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -31,86 +31,41 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # Suyu Switch Emulator
-    suyu = {
-      url = "github:Noodlez1232/suyu-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
-  outputs = { nixpkgs, nixpkgs-unstable, stylix, sops, ... }@inputs: 
-  {
-    nixosConfigurations.desktop = nixpkgs.lib.nixosSystem rec {
-      system = "x86_64-linux";
-      
-      specialArgs = {
-	      inherit inputs;
-
-        pkgs = import nixpkgs {
-          config.allowUnfree = true;
-          inherit system;
-        };
-
-        pkgs-unstable = import nixpkgs-unstable {
-          config.allowUnfree = true;
-          inherit system;
-        };
-      };
-      
-      modules = [
-        stylix.nixosModules.stylix
-        sops.nixosModules.sops
-	      ./hosts/desktop/configuration.nix
-      ];
-    };
-
-    nixosConfigurations.laptop = nixpkgs.lib.nixosSystem rec {
+  outputs = { nixpkgs, stylix, sops, ... }@inputs: 
+    let
       system = "x86_64-linux";
 
-      specialArgs = {
-	      inherit inputs;
+      # base modules that will commonly be used by all systems
+      baseModules = [
+        ./modules/overlays.nix 
+        ./modules
+        ./users
 
-        pkgs = import nixpkgs {
-          config.allowUnfree = true;
-          inherit system;
-        };
-
-        pkgs-unstable = import nixpkgs-unstable {
-          config.allowUnfree = true;
-          inherit system;
-        };
-      };
-      
-      modules = [
         stylix.nixosModules.stylix
         sops.nixosModules.sops
-	      ./hosts/laptop/configuration.nix
       ];
-    };
-
-    nixosConfigurations.server = nixpkgs.lib.nixosSystem rec {
-      system = "x86_64-linux";
-
-      specialArgs = {
-	      inherit inputs;
-
-        pkgs = import nixpkgs {
-          config.allowUnfree = true;
-          inherit system;
-        };
-
-        pkgs-unstable = import nixpkgs-unstable {
-          config.allowUnfree = true;
-          inherit system;
-        };
+    in
+    {
+      nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
+        inherit system;
+        
+        specialArgs = { inherit inputs; };
+        
+        modules = baseModules ++ [
+          ./hosts/desktop/configuration.nix
+        ];
       };
-      
-      modules = [
-        stylix.nixosModules.stylix
-        sops.nixosModules.sops
-	      ./hosts/server/configuration.nix
-      ];
+
+      nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
+        inherit system;
+        
+       specialArgs = { inherit inputs; };
+
+        modules = baseModules ++ [
+          ./hosts/laptop/configuration.nix
+        ];
+      };
     };
-  };
 }

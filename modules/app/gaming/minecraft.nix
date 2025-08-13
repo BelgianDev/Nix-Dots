@@ -11,7 +11,10 @@ in {
 
   config = mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
-      prismlauncher
+      (prismlauncher.override {
+        textToSpeechSupport = false; # STFU Narrator
+      })
+      (pkgs.callPackage ./../../../pkgs/crafted-launcher-legacy.nix {}) # Custom Launcher
     ];
   };
 }

@@ -18,8 +18,8 @@
     };
   };
 
-  environment.sessionVariables = rec {
-    AW_REPO_USERNAME = "$(< ${config.sops.secrets.aw_username.path})";
-    AW_REPO_PASSWORD = "$(< ${config.sops.secrets.aw_password.path})";
+  environment.sessionVariables = {
+    REPO_USERNAME = "$(< ${config.sops.secrets.aw_username.path})";
+    REPO_PASSWORD = "$(< ${config.sops.secrets.aw_password.path})";
   };
 }

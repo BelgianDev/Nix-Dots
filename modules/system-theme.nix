@@ -13,14 +13,12 @@
   # Disables TTY theming.
   stylix.targets.console.enable = false;
 
-  # Color Schemes
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/da-one-ocean.yaml";
-  stylix.image = ./../assets/wallpaper/rocket-night.png;
+  stylix.image = ./../assets/wallpaper/space-suit.png;
   stylix.polarity = "dark";
 
   stylix.opacity = {
-    applications = 10;
-    terminal = 0.8;
+    applications = 1.0;
+    terminal = 0.5;
     desktop = 1.0;
     popups = 1.0;
   };
@@ -40,7 +38,7 @@
     };
 
     monospace = {
-      package = pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; };
+      package = pkgs.nerd-fonts.jetbrains-mono;
       name = "JetBrains Mono Nerd Font";
     };
   };

@@ -1,4 +1,4 @@
-{ config, lib, pkgs, pkgs-unstable, ... }:
+{ config, lib, pkgs, ... }:
 
 with lib;
 
@@ -7,26 +7,22 @@ let
 in {
   options.module.desktop.gnome = {
     enable = mkEnableOption "Enables the Gnome Desktop Environment.";
-    wayland = mkEnableOption "Enables wayland on GDM and Gnome.";
-    gdm.enable = mkEnableOption "Enables GDM Display Manager.";
   };
 
   config = mkIf cfg.enable {
+    module.desktop.gdm.enable = true; # Enable GDM
+
     services.xserver = {
       enable = true;
-
-      displayManager.gdm.enable = cfg.enable;
-      displayManager.gdm.wayland = cfg.wayland;
-
       desktopManager.gnome.enable = true;
     };
 
-    services.gnome.core-utilities.enable = false;
+    services.gnome.core-apps.enable = false;
     environment.gnome.excludePackages = with pkgs; [
       gnome-tour
     ];
 
-    environment.systemPackages = with pkgs-unstable; [
+    environment.systemPackages = with pkgs; [
       # Default Environment apps
       eog
       totem
@@ -35,8 +31,6 @@ in {
       gnome-calculator
       gnome-screenshot
       gnome-disk-utility
-
-      libnotify
 
       baobab
       gnome-photos

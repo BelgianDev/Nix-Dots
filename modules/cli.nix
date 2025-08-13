@@ -1,4 +1,4 @@
-{ pkgs, pkgs-unstable, ... }:
+{ pkgs, ... }:
 
 {
   programs.fish.enable = true;
@@ -59,16 +59,14 @@
     htop
     btop
     mtr
-    iotop
-    iftop
 
     # Java
-    pkgs-unstable.jdk23
-    pkgs-unstable.jdk21
-    pkgs-unstable.jdk17
-    pkgs-unstable.jdk8
+    pkgs.unstable.jdk23
+    pkgs.unstable.jdk21
+    pkgs.unstable.jdk17
+    pkgs.unstable.jdk8
 
-    # Funny Stuff
+    # Random Stuff
     pipes-rs
     figlet
     cowsay
@@ -76,5 +74,6 @@
     cbonsai
     pfetch-rs
     fastfetch
+    cava
   ];
 }
