@@ -14,5 +14,9 @@ in {
       unstable.jetbrains.idea-ultimate
       visualvm
     ];
+
+    # Enable perf as user - Intelij
+    boot.kernel.sysctl."kernel.perf_event_paranoid" = -1;
+    boot.kernel.sysctl."kernel.kptr_restrict" = lib.mkForce 0;
   };
 }
