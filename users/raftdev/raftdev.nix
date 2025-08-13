@@ -1,10 +1,6 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 
 {
-  imports = [
-    inputs.home-manager.nixosModules.default
-  ];
-
   users.users.raftdev = {
     isNormalUser = true;
     description = "RaftDev";
@@ -13,7 +9,6 @@
   };
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs pkgs; };
     users."raftdev" = import ./home.nix;
   };
 }

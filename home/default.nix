@@ -6,8 +6,6 @@
     ./app/spotify.nix
     ./app/terminal/alacritty.nix
 
-    ./bar/waybar.nix
-
     ./cli/btop.nix
     ./cli/cava.nix
 

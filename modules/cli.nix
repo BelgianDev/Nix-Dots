@@ -66,7 +66,7 @@
     pkgs.unstable.jdk17
     pkgs.unstable.jdk8
 
-    # Funny Stuff
+    # Random Stuff
     pipes-rs
     figlet
     cowsay
