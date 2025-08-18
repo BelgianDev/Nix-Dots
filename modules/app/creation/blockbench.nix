@@ -6,7 +6,7 @@ let
   cfg = config.module.app.creation.blockbench;
 in {
   options.module.app.creation.blockbench = {
-    enable = mkEnableOption "Enable aseprite.";
+    enable = mkEnableOption "Enable blockbench.";
   };
 
   config = mkIf cfg.enable {
