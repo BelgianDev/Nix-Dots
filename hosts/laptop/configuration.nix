@@ -12,10 +12,6 @@
   # Kernel Stuff
   module.kernel.unstable = true;
 
-  # Bootloader
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
   # Network
   networking.hostName = "Raft-Laptop"; 
   networking.firewall.enable = false;
@@ -30,6 +26,16 @@
     gaming.steam.enable = true;
     virtualisation.boxes.enable = true;
   };
+
+  # Bootloader
+  boot.loader.grub = {
+    enable = true;
+    device = "nodev";
+    useOSProber = true;
+  };
+
+  # boot.loader.systemd-boot.enable = true;
+  # boot.loader.efi.canTouchEfiVariables = true;
 
   system.stateVersion = "25.05"; # Did you read the comment?
 }
