@@ -10,7 +10,7 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Kernel Stuff
-  module.kernel.unstable = true;
+  module.kernel.unstable = false;
 
   # Network
   networking.hostName = "Raft-Laptop"; 

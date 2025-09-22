@@ -14,7 +14,7 @@
 
   # Kernel Stuff
   module.kernel = {
-    unstable = true;
+    unstable = false;
     nvidia = {
       enable = true;
       open = false;
