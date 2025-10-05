@@ -22,6 +22,8 @@
     };
   };
 
+  services.flatpak.enable = true;
+
   # No Password for sudo, safe for desktop.
   security.sudo.wheelNeedsPassword = false;
 

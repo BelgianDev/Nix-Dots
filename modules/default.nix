@@ -12,6 +12,7 @@
 
     ./app/bitwarden.nix
     ./app/obsidian.nix
+    ./app/torrent.nix
     ./app/vlc.nix
     ./app/dev/analysis.nix
     ./app/dev/java.nix
@@ -58,6 +59,7 @@
 
   # Apps
   module.app = {
+    torrent.enable = lib.mkDefault true;
     bitwarden.enable = lib.mkDefault true;
     obsidian.enable = lib.mkDefault true;
     vlc.enable = lib.mkDefault true;
