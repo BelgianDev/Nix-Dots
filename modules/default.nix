@@ -23,7 +23,6 @@
     ./app/dev/web.nix
     ./app/browser/firefox.nix
     ./app/browser/zen.nix
-    ./app/chat/discord.nix
     ./app/chat/whatsapp.nix
     ./app/chat/teams.nix
     ./app/creation/aseprite.nix
@@ -96,7 +95,6 @@
 
     chat = {
       teams.enable = lib.mkDefault true;
-      discord.enable = lib.mkDefault true;
       whatsapp.enable = lib.mkDefault true;
     };
   };
