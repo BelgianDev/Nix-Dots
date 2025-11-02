@@ -13,12 +13,13 @@
   # Disables TTY theming.
   stylix.targets.console.enable = false;
 
-  stylix.image = ./../assets/wallpaper/space-suit.png;
+  stylix.image = ./../assets/wallpaper/sky.jpg;
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-frappe.yaml";
   stylix.polarity = "dark";
 
   stylix.opacity = {
     applications = 1.0;
-    terminal = 0.5;
+    terminal = 0.8;
     desktop = 1.0;
     popups = 1.0;
   };

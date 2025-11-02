@@ -96,10 +96,6 @@ in {
           maximize = [];
         };
 
-        "org/gnome/mutter" = {
-          check-alive-timeout = 0; # Disable 'Window not responding' popup
-        };
-
         "org/gnome/settings-daemon/plugins/media-keys" = {
           www = ["<Super>w"];
           help = [];
@@ -170,6 +166,61 @@ in {
           show-gpu = true;
 
           hot-sensors = [ "_processor_usage_" "_memory_usage_" "__temperature_avg__" ];
+        };
+
+        # Extension - Blur My Shell
+        "org/gnome/shell/extensions/blur-my-shell" = {
+          pipelines = ''
+            {
+              'pipeline_default': {
+                'name': <'Minimal Blur'>,
+                'effects': <[
+                  <{
+                    'type': <'native_static_gaussian_blur'>,
+                    'id': <'effect_fast_blur'>,
+                    'params': <{
+                      'radius': <8>,
+                      'brightness': <0.45>,
+                      'unscaled_radius': <2>
+                    }>
+                  }>
+                ]>
+              },
+              'pipeline_default_rounded': {
+                'name': <'Minimal Blur Rounded'>,
+                'effects': <[
+                  <{
+                    'type': <'native_static_gaussian_blur'>,
+                    'id': <'effect_fast_blur_rounded'>,
+                    'params': <{
+                      'radius': <8>,
+                      'brightness': <0.45>
+                    }>
+                  }>,
+                  <{
+                    'type': <'corner'>,
+                    'id': <'effect_corner_rounding'>,
+                    'params': <{
+                      'radius': <16>
+                    }>
+                  }>
+                ]>
+              }
+            }
+          '';
+        };
+
+        "org/gnome/shell/extensions/blur-my-shell/applications" = {
+          blur = true;
+          whitelist = [ "Alacritty" ];
+          sigma = 10;
+          brightness = 1.0;
+          opacity = 255;
+          hacks-level = 1;
+        };
+
+        "org/gnome/shell/extensions/blur-my-shell/dash-to-dock" = {
+          blur = false;
         };
       };
     };

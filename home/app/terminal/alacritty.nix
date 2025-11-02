@@ -21,7 +21,11 @@ in {
         };
 
         window = {
-          blur = true;
+          class = {
+            instance = "Alacritty";
+            general = "Alacritty";
+          };
+          
           padding = {
             x = 15;
             y = 15;
