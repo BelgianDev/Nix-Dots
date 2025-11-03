@@ -28,14 +28,21 @@
   };
 
   # Bootloader
-#  boot.loader.grub = {
-#    enable = true;
-#    device = "nodev";
-#    useOSProber = true;
-#  };
+  boot.loader = {
+    grub = {
+      enable = true;
+      device = "nodev";
+      useOSProber = true;
+      efiSupport = true;
+    };
 
-   boot.loader.systemd-boot.enable = true;
-   boot.loader.efi.canTouchEfiVariables = true;
+    efi = {
+      canTouchEfiVariables = true;
+      efiSysMountPoint = "/boot";
+    };
+  };
+
+  # boot.loader.systemd-boot.enable = true;
 
   system.stateVersion = "25.05"; # Did you read the comment?
 }
