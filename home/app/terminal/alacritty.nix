@@ -21,6 +21,7 @@ in {
         };
 
         window = {
+          decorations = "none";
           class = {
             instance = "Alacritty";
             general = "Alacritty";

@@ -217,6 +217,7 @@ in {
           brightness = 1.0;
           opacity = 255;
           hacks-level = 1;
+          dynamic-opacity = false;
         };
 
         "org/gnome/shell/extensions/blur-my-shell/dash-to-dock" = {
