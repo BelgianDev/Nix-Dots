@@ -7,6 +7,7 @@
     ./app/terminal/alacritty.nix
     ./app/chat/discord.nix
 
+    ./cli/bat.nix
     ./cli/btop.nix
     ./cli/cava.nix
 
@@ -22,6 +23,7 @@
     cli = {
       btop.enable = lib.mkDefault true;
       cava.enable = lib.mkDefault true;
+      bat.enable = lib.mkDefault true;
     };
 
     app = {

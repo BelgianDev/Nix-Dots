@@ -79,6 +79,8 @@ in {
             MessageLogger = {
               enabled = true;
               ignoreSelf = true;
+              ignoreBots = true;
+              logEdits = false;
             };
 
             FixSpotifyEmbeds = {

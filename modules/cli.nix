@@ -51,7 +51,6 @@
     fzf
     atuin
     dust
-    bat
     eza
     zoxide
 

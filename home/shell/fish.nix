@@ -25,7 +25,7 @@ in {
 
       shellAliases = {
         ls = "eza -a";
-        cat = "bat";
+        cat = mkIf (config.home.cli.bat.enable) "bat";
         disk = "dust";
         search = "fzf";
 
