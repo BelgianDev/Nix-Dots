@@ -14,7 +14,8 @@ in {
       (prismlauncher.override {
         textToSpeechSupport = false; # STFU Narrator
       })
-      (pkgs.callPackage ./../../../pkgs/crafted-launcher-legacy.nix {}) # Custom Launcher
+
+      pkgs.local.crafted-launcher-legacy
     ];
   };
 }

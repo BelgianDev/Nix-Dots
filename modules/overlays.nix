@@ -13,12 +13,19 @@ let
     attrName = "unstable";
     over = inputs.nixpkgs-unstable;
   };
+
+  local-overlay = final: _prev: {
+    local = import ../pkgs {
+      system = final.system;
+      pkgs = final;
+    };
+  };
 in
 
 {
   nixpkgs = {
     config.allowUnfree = true;
-    overlays = [ nixos-unstable-overlay ];
+    overlays = [ nixos-unstable-overlay local-overlay ];
   };
 
   nix = {
