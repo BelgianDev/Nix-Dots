@@ -16,14 +16,17 @@
     };
 
     stylix = {
-      url = "github:danth/stylix/release-25.05"; 
+      url = "github:nix-community/stylix/release-25.05"; 
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # Zen - Browser
     zen = {
-      url = "github:0xc000022070/zen-browser-flake";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+     url = "github:0xc000022070/zen-browser-flake";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        home-manager.follows = "home-manager";
+      };
     };
 
     # Spicetify
