@@ -51,6 +51,7 @@ in {
 
         "org/gnome/mutter" = {
           dynamic-workspaces = true;
+          workspaces-only-on-primary = false;
         };
 
         "org/gnome/settings-daemon/plugins/color" = {
@@ -145,6 +146,7 @@ in {
           window-gap-size-increment = 1;
 
           tabbed-tiling-mode-enable = false;
+          focus-border-toggle = false;
         };
 
         # Extension - Vitals
