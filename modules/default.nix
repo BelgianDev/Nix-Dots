@@ -14,6 +14,7 @@
     ./app/obsidian.nix
     ./app/torrent.nix
     ./app/vlc.nix
+    ./app/winboat.nix
     ./app/dev/analysis.nix
     ./app/dev/java.nix
     ./app/dev/python.nix
@@ -62,6 +63,8 @@
     bitwarden.enable = lib.mkDefault true;
     obsidian.enable = lib.mkDefault true;
     vlc.enable = lib.mkDefault true;
+
+    winboat.enable = lib.mkDefault false;
 
     sftp.filezilla.enable = lib.mkDefault true;
     virtualisation.boxes.enable = lib.mkDefault false;
