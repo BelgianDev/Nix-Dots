@@ -12,6 +12,7 @@
     killall
     ipcalc
     screen
+    parted
 
     # Formatters
     nixfmt-rfc-style
