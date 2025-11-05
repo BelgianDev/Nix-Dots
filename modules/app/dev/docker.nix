@@ -12,10 +12,6 @@ in {
   config = mkIf cfg.enable {
     virtualisation.docker = { 
       enable = true;
-      daemon.settings = { 
-        userland-proxy = false;
-        iptables = true;
-      };
     };
 
     virtualisation.oci-containers.backend = "docker";
