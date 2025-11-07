@@ -37,6 +37,10 @@ in {
           natural-scroll = true;
         };
 
+        "org/gnome/nautilus/preferences" = {
+          default-folder-viewer = "list-view";
+        };
+
         "org/gnome/system/location" = {
           enabled = false;
         };
