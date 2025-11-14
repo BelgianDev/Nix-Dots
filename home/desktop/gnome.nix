@@ -26,6 +26,7 @@ in {
         "org/gnome/desktop/interface" = {
           gtk-enable-primary-paste = false;
           enable-hot-corners = false;
+          show-battery-percentage = true;
         };
 
         "org/gnome/desktop/peripherals/mouse" = {
