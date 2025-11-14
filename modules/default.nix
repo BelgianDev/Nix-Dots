@@ -35,6 +35,7 @@
     ./app/virtualization/boxes.nix
 
     ./hardware/firmware.nix
+    ./hardware/printers.nix
     ./hardware/ssd.nix
     ./hardware/thermal.nix
 
@@ -103,6 +104,7 @@
   };
 
   module.hardware = {
+    printers.enable = lib.mkDefault true;
     ssd.enable = lib.mkDefault true;
     thermal.enable = lib.mkDefault false;
   };
