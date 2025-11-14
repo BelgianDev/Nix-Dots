@@ -64,7 +64,7 @@
     obsidian.enable = lib.mkDefault true;
     vlc.enable = lib.mkDefault true;
 
-    winboat.enable = lib.mkDefault false;
+    winboat.enable = lib.mkDefault true;
 
     sftp.filezilla.enable = lib.mkDefault true;
     virtualisation.boxes.enable = lib.mkDefault false;
