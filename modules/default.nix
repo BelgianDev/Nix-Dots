@@ -28,6 +28,7 @@
     ./app/chat/teams.nix
     ./app/creation/aseprite.nix
     ./app/creation/blockbench.nix
+    ./app/creation/audacity.nix
     ./app/gaming/steam.nix
     ./app/gaming/minecraft.nix
     ./app/gaming/switch.nix
@@ -95,6 +96,7 @@
     creation = {
       aseprite.enable = lib.mkDefault false;
       blockbench.enable = lib.mkDefault false;
+      audacity.enable = lib.mkDefault false;
     };
 
     chat = {

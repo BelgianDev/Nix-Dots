@@ -39,6 +39,7 @@
   # Apps
   module.app.creation.aseprite.enable = true;
   module.app.creation.blockbench.enable = true;
+  module.app.creation.audacity.enable = true;
   module.app.gaming.steam.enable = true;
   module.app.gaming.switch.enable = true;
   module.app.virtualisation.boxes.enable = true;
