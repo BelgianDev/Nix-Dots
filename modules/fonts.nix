@@ -11,7 +11,7 @@ in {
 
   config = mkIf cfg.enable {
     fonts.packages = with pkgs; [
-      vistafonts
+      vista-fonts
     ];
   };
 }

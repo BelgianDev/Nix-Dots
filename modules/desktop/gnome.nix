@@ -12,10 +12,8 @@ in {
   config = mkIf cfg.enable {
     module.desktop.gdm.enable = true; # Enable GDM
 
-    services.xserver = {
-      enable = true;
-      desktopManager.gnome.enable = true;
-    };
+    services.xserver.enable = true;
+    services.desktopManager.gnome.enable = true;
 
     services.gnome.core-apps.enable = false;
     environment.gnome.excludePackages = with pkgs; [

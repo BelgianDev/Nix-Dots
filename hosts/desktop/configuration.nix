@@ -44,5 +44,5 @@
   module.app.gaming.switch.enable = true;
   module.app.virtualisation.boxes.enable = true;
 
-  system.stateVersion = "25.05"; # Did you read the comment?
+  system.stateVersion = "25.11"; # Did you read the comment?
 }

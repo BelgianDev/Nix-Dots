@@ -10,13 +10,15 @@
 
   home = {
     homeDirectory = "/home/raftdev";
-    stateVersion = "25.05";
+    stateVersion = "25.11";
   };
 
   programs.git = {
     enable = true;
-    userName = "RaftDev";
-    userEmail = "theraft08@gmail.com";
+    settings.user = {
+      name = "RaftDev";
+      email = "theraft08@gmail.com";
+    };
   };
 
   programs.gh-dash.enable = true;
@@ -35,6 +37,6 @@
   # Fixes Graphical Stuff with java
   programs.java = {
     enable = true;
-    package = (pkgs.jdk21.override { enableJavaFX = true; });
+    package = pkgs.jdk25;
   };
 }

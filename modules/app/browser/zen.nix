@@ -1,4 +1,4 @@
-{ config, lib, inputs, ... }:
+{ config, lib, inputs, pkgs, ... }:
 
 with lib;
 
@@ -11,7 +11,7 @@ in {
 
   config = mkIf cfg.enable {
     environment.systemPackages = [
-      inputs.zen.packages."${system}".beta
+      inputs.zen.packages."${pkgs.stdenv.hostPlatform.system}".beta
     ];
   };
 }

@@ -62,7 +62,6 @@
 
     # Java
     pkgs.unstable.jdk25
-    pkgs.unstable.jdk23
     pkgs.unstable.jdk21
     pkgs.unstable.jdk17
     pkgs.unstable.jdk8
