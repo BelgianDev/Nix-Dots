@@ -24,6 +24,15 @@ in {
           "files.autoSave" = "onFocusChange";
           "git.confirmSync" = false;
 
+          "explorer.confirmDelete" = false;
+          "explorer.confirmDragAndDrop" = false;
+
+          "files.associations"= {
+            "*.vsh" = "GLSL";
+            "*.fsh" = "GLSL";
+            "*.glsl" = "GLSL";
+          };
+
           # Editor LSP
           "nix.serverPath" = "nixd";
           "nix.enableLanguageServer" = true;
