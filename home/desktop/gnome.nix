@@ -154,6 +154,11 @@ in {
           focus-border-toggle = false;
         };
 
+        # Extension - POP-Shell
+        "/org/gnome/shell/extensions/pop-shell/" = {
+          tile-by-default = true;
+        };
+
         # Extension - Vitals
         "org/gnome/shell/extensions/vitals" = {
           position-in-panel = 0;
