@@ -238,7 +238,8 @@ in {
       extensions = with pkgs.unstable.gnomeExtensions; [
         { package = blur-my-shell; }
         { package = vitals; }
-        { package = forge; }
+        # { package = forge; } - Looking for maintainers, so support isn't great in Gnome 49
+        { package = pop-shell; }
         { package = no-title-bar; }
         { package = gnome-40-ui-improvements; }
       ];
