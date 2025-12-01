@@ -155,7 +155,7 @@ in {
         };
 
         # Extension - POP-Shell
-        "/org/gnome/shell/extensions/pop-shell/" = {
+        "org/gnome/shell/extensions/pop-shell" = {
           tile-by-default = true;
         };
 
