@@ -66,11 +66,11 @@
     obsidian.enable = lib.mkDefault true;
     vlc.enable = lib.mkDefault true;
 
-    winboat.enable = lib.mkDefault true;
-
     sftp.filezilla.enable = lib.mkDefault true;
     virtualisation.boxes.enable = lib.mkDefault false;
     
+    winboat.enable = true;
+
     dev = {
       java.enable = lib.mkDefault true;
       web.enable = lib.mkDefault true;
