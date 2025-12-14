@@ -11,6 +11,8 @@ in {
 
   config = mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
+      worldpainter
+
       (prismlauncher.override {
         textToSpeechSupport = false; # STFU Narrator
       })
