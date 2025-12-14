@@ -25,6 +25,11 @@
   module.app = {
     gaming.steam.enable = true;
     virtualisation.boxes.enable = true;
+
+    dev = {
+      rust.enable = true;
+      web.enable = true;
+    };
   };
 
   # Bootloader
