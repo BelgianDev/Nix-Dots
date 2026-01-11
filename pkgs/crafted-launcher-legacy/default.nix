@@ -2,11 +2,11 @@
 
 let 
   pname = "crafted-launcher-legacy";
-  version = "2.2.2";
+  version = "2.2.5";
 
   src = pkgs.fetchurl {
-    url = "https://github.com/BelgianDev/Crafted-Launcher-Legacy/releases/download/v${version}/Crafted.Launcher.Legacy-setup-${version}.AppImage";
-    hash = "sha256-cT9AzaNDehEg4k6chLRGHT9Ki26Cgr+2Xk2T7TioiJ4="; 
+    url = "https://github.com/BelgianDev/Crafted-Launcher-Legacy/releases/download/v2.2.5/Crafted-Launcher-Legacy-setup-2.2.5.AppImage";
+    hash = "sha256-WVJqTzdhjgzJPgPGmkcGOA7oAFytkjNieD0HZUF104g="; 
   };
 
   runtimeLibs = with pkgs; [

@@ -44,7 +44,14 @@
 
     # Secrets
     sops
+    htop
+    btop
+    mtr
 
+    # Java
+    pkgs.unstable.jdk25
+    pkgs.unstable.jdk21
+    pkgs.unstable.jdk17
     # Macros
     xdotool
 

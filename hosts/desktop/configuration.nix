@@ -47,13 +47,25 @@
   networking.firewall.enable = false; # Fuck the firewall
   networking.networkmanager.enable = true;
 
-  # Apps
-  module.app.creation.aseprite.enable = true;
-  module.app.creation.blockbench.enable = true;
-  module.app.creation.audacity.enable = true;
-  module.app.gaming.steam.enable = true;
-  module.app.gaming.switch.enable = true;
-  module.app.virtualisation.boxes.enable = true;
+  module = {
+    app = {
+      creation = {
+        aseprite.enable = true;
+        blockbench.enable = true;
+        audacity.enable = true;
+      };
+
+      dev = {
+        rust.enable = true;
+        web.enable = true;
+        c.enable = true;
+      };
+
+      gaming = {
+        steam.enable = true;
+      };
+    };
+  };
 
   system.stateVersion = "25.11"; # Did you read the comment?
 }
