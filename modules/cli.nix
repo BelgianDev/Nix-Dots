@@ -13,6 +13,7 @@
     ipcalc
     screen
     parted
+    age
 
     # Formatters
     nixfmt-rfc-style
