@@ -25,7 +25,7 @@ in
 {
   nixpkgs = {
     config.allowUnfree = true;
-    overlays = [ nixos-unstable-overlay local-overlay ];
+    overlays = [ nixos-unstable-overlay local-overlay inputs.niri.overlays.niri ];
   };
 
   nix = {

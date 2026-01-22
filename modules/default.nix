@@ -48,6 +48,7 @@
 
     ./desktop/gdm.nix
     ./desktop/gnome.nix
+    ./desktop/niri.nix
 
     ./service/bluetooth.nix
 
@@ -119,6 +120,7 @@
     gdm.enable = lib.mkDefault true;
 
     gnome.enable = lib.mkDefault true;
+    niri.enable = lib.mkDefault false;
   };
 
   # Kernel Stuff

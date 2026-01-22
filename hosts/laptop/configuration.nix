@@ -21,6 +21,8 @@
   module.hardware.thermal.enable = true;
   module.kernel.intel.enable = true;
 
+  module.desktop.niri.enable = true;
+
   # Apps
   module.app = {
     gaming.steam.enable = true;
