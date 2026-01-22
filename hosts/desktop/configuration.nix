@@ -12,6 +12,8 @@
   module.wine.enable = true;
   module.tool.android.enable = true;
 
+  module.desktop.niri.enable = false; # Tests fails
+
   # Kernel Stuff
   module.kernel = {
     unstable = false;
