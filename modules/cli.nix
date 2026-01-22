@@ -14,6 +14,7 @@
     screen
     parted
     age
+    sops
 
     # Formatters
     nixfmt-rfc-style
