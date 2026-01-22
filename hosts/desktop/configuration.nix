@@ -1,4 +1,4 @@
-{ ... }:
+{ config, ... }:
 
 {
   imports =
@@ -22,6 +22,12 @@
       open = false;
       settings = false;
     };
+  };
+
+  module.service.wireguard = {
+    enable = true;
+    localAddress = "10.100.0.2/24";
+    privateKeyFile = config.sops.secrets."wireguard/desktop/key".path;
   };
 
   services.flatpak.enable = true;

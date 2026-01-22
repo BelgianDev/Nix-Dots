@@ -50,7 +50,10 @@
     ./desktop/gnome.nix
     ./desktop/niri.nix
 
+
+    # ./service/pipewire.nix - Never was added before I saw it today, TODO: Test this in the future.
     ./service/bluetooth.nix
+    ./service/wireguard.nix
 
     ./tool/android.nix
   ];
@@ -137,7 +140,10 @@
   };
 
   # Services
-  module.service.bluetooth.enable = lib.mkDefault true;
+  module.service = {
+    bluetooth.enable = lib.mkDefault true;
+    wireguard.enable = lib.mkDefault true;
+  };
   
   # Required Programs
   environment.systemPackages = with pkgs; [

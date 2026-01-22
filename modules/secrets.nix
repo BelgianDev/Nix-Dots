@@ -15,6 +15,8 @@
       aw_password = {
         owner = "raftdev";
       };
+
+      "wireguard/desktop/key" = {};
     };
   };
 
