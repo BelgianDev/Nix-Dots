@@ -17,6 +17,7 @@
       };
 
       "wireguard/desktop/key" = {};
+      "wireguard/laptop/key" = {};
     };
   };
 

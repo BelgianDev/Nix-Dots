@@ -1,4 +1,4 @@
-{ ... }:
+{ config, ... }:
 
 {
   imports =
@@ -22,6 +22,12 @@
   module.kernel.intel.enable = true;
 
   module.desktop.niri.enable = true;
+
+  module.service.wireguard = {
+    enable = true;
+    localAddress = "10.100.0.3/32";
+    privateKeyFile = config.sops.secrets."wireguard/laptop/key".path;
+  };
 
   # Apps
   module.app = {
