@@ -54,6 +54,7 @@
     # ./service/pipewire.nix - Never was added before I saw it today, TODO: Test this in the future.
     ./service/bluetooth.nix
     ./service/wireguard.nix
+    ./service/ntfy.nix
 
     ./tool/android.nix
   ];
@@ -143,6 +144,7 @@
   module.service = {
     bluetooth.enable = lib.mkDefault true;
     wireguard.enable = lib.mkDefault true;
+    ntfy.enable = lib.mkDefault true;
   };
   
   # Required Programs
