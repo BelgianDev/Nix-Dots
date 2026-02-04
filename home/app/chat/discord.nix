@@ -29,10 +29,6 @@ in {
 
       vencord = {
         settings = {
-          autoUpdate = false;
-          autoUpdateNotification = false;
-          notifyAboutUpdates = false;
-
           plugins = {
             MessageClickActions.enabled = true;
             YoutubeAdblock.enabled = true;
