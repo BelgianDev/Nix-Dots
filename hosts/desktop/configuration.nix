@@ -66,6 +66,7 @@
 
       gaming = {
         steam.enable = true;
+        switch.enable = true;
       };
     };
   };
