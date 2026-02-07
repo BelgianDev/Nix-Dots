@@ -130,8 +130,8 @@
   # Kernel Stuff
   module.kernel = {
     unstable = lib.mkDefault false;
+    
     controller.enable = lib.mkDefault true;
-
     intel.enable = lib.mkDefault false;
     nvidia = {
       enable = lib.mkDefault false;

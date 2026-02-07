@@ -17,11 +17,6 @@
   # Kernel Stuff
   module.kernel = {
     unstable = false;
-    nvidia = {
-      enable = true;
-      open = false;
-      settings = false;
-    };
   };
 
   module.service.wireguard = {
