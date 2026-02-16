@@ -35,8 +35,14 @@
     virtualisation.boxes.enable = true;
 
     dev = {
-      rust.enable = true;
+      rust.enable = false;
       web.enable = true;
+    };
+
+    creation = {
+      aseprite.enable = true;
+      blockbench.enable = true;
+      audacity.enable = false;
     };
   };
 
