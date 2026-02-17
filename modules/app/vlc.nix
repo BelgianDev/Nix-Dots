@@ -12,6 +12,7 @@ in {
   config = mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
       vlc
+      unstable.makemkv # as of 25.11 stable is broken
     ];
   };
 }
