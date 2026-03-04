@@ -12,6 +12,9 @@
   # Kernel Stuff
   module.kernel.unstable = false;
 
+  # Misc
+  module.tool.android.enable = true;
+
   # Network
   networking.hostName = "Raft-Laptop"; 
   networking.firewall.enable = false;
