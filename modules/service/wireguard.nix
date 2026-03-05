@@ -31,6 +31,7 @@ in {
       wireguard-tools
     ];
 
+    services.mullvad-vpn.enable = true;
     networking.wireguard.interfaces.wg0 = {
       ips = [ cfg.localAddress ];
       listenPort = 51820;

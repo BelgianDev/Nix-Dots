@@ -16,6 +16,8 @@ in {
 
     environment.systemPackages = with pkgs; [
       mangohud
+      heroic-unwrapped
+      unstable.protonplus
     ];
   };
 }
