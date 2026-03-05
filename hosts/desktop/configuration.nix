@@ -51,6 +51,10 @@
   networking.networkmanager.enable = true;
 
   module = {
+    hardware = {
+      amd.enable = true;
+    };
+
     app = {
       creation = {
         aseprite.enable = true;

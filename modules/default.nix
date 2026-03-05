@@ -35,6 +35,7 @@
     ./app/sftp/filezilla.nix
     ./app/virtualization/boxes.nix
 
+    ./hardware/amd.nix
     ./hardware/firmware.nix
     ./hardware/printers.nix
     ./hardware/ssd.nix
@@ -114,6 +115,7 @@
     printers.enable = lib.mkDefault true;
     ssd.enable = lib.mkDefault true;
     thermal.enable = lib.mkDefault false;
+    amd.enable = lib.mkDefault false;
   };
 
   module.wine.enable = lib.mkDefault false;

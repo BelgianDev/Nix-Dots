@@ -44,6 +44,9 @@
     sysstat
     smartmontools
 
+    # Networking
+    iperf3
+
     # Secrets
     sops
     htop
