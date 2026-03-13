@@ -92,8 +92,8 @@
     };
 
     browser = {
-      zen.enable = lib.mkDefault false;
-      firefox.enable = lib.mkDefault true;
+      zen.enable = lib.mkDefault true;
+      firefox.enable = lib.mkDefault false;
     };
 
     creation = {

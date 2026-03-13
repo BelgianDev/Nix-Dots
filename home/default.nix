@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./app/browser/zen.nix
     ./app/editor/vscode.nix
     ./app/spotify.nix
     ./app/terminal/alacritty.nix
@@ -31,6 +32,10 @@
 
       editor.vscode.enable = lib.mkDefault true;
       terminal.alacritty.enable = lib.mkDefault true;
+
+      browser = {
+        zen.enable = true;
+      };
 
       chat = {
         discord.enable = lib.mkDefault true;
