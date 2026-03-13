@@ -225,7 +225,7 @@ in {
         "org/gnome/shell/extensions/blur-my-shell/applications" = {
           blur = true;
           whitelist = [ "Alacritty" ];
-          sigma = 10;
+          sigma = 25;
           brightness = 1.0;
           opacity = 255;
           hacks-level = 1;

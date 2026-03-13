@@ -14,8 +14,8 @@
   stylix.targets.console.enable = false;
 
   stylix.polarity = "dark";
-  stylix.image = ./../assets/wallpaper/sky.jpg;
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-frappe.yaml";
+  stylix.image = ./../assets/wallpaper/mountains.jpeg;
+  # stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-frappe.yaml";
   stylix.override = {
     base03 = "C6C6C6"; # Improves readability on Discord and Alacritty, hasn't been an issue somewhere else so ¯\_(ツ)_/¯
   };
