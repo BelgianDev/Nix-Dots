@@ -14,7 +14,6 @@
     ./app/obsidian.nix
     ./app/torrent.nix
     ./app/vlc.nix
-    ./app/winboat.nix
     ./app/dev/analysis.nix
     ./app/dev/java.nix
     ./app/dev/python.nix
@@ -74,8 +73,6 @@
 
     sftp.filezilla.enable = lib.mkDefault true;
     virtualisation.boxes.enable = lib.mkDefault false;
-    
-    winboat.enable = true;
 
     dev = {
       java.enable = lib.mkDefault true;
