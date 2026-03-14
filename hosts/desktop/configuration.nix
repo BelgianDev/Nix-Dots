@@ -31,18 +31,9 @@
   security.sudo.wheelNeedsPassword = false;
 
   # Bootloader
-  boot.loader = {
-    grub = {
-      enable = true;
-      device = "nodev";
-      useOSProber = true;
-      efiSupport = true;
-    };
-
-    efi = {
-      canTouchEfiVariables = true;
-      efiSysMountPoint = "/boot";
-    };
+  module.kernel.boot.limine = {
+    enable = true;
+    dual_win = false;
   };
 
   # Network
