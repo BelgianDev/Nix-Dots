@@ -40,6 +40,7 @@
     ./hardware/ssd.nix
     ./hardware/thermal.nix
 
+    ./kernel/boot/limine.nix
     ./kernel/controller.nix
     ./kernel/kernel.nix
     ./kernel/nvidia.nix

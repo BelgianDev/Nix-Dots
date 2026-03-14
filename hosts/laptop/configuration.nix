@@ -31,6 +31,7 @@
     localAddress = "10.100.0.3/32";
     privateKeyFile = config.sops.secrets."wireguard/laptop/key".path;
   };
+  
 
   # Apps
   module.app = {
@@ -49,22 +50,10 @@
     };
   };
 
-  # Bootloader
-  boot.loader = {
-    grub = {
-      enable = true;
-      device = "nodev";
-      useOSProber = true;
-      efiSupport = true;
-    };
-
-    efi = {
-      canTouchEfiVariables = true;
-      efiSysMountPoint = "/boot";
-    };
+  module.kernel.boot.limine = {
+    enable = true;
+    dual_win = true;
   };
-
-  # boot.loader.systemd-boot.enable = true;
 
   system.stateVersion = "25.11"; # Did you read the comment?
 }
