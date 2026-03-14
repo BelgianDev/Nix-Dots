@@ -49,6 +49,8 @@
 
     # Secrets
     sops
+
+    # Monitoring
     htop
     btop
     mtr

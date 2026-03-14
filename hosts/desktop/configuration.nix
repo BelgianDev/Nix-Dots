@@ -33,7 +33,7 @@
   # Bootloader
   module.kernel.boot.limine = {
     enable = true;
-    dual_win = false;
+    dual-win = false;
   };
 
   # Network

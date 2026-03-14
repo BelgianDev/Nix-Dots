@@ -7,7 +7,7 @@ let
 in {
   options.module.kernel.boot.limine = {
     enable = mkEnableOption "Enable Limine module";
-    dual_win = mkEnableOption "Whether to set up limine with Windows Dual boot";
+    dual-win = mkEnableOption "Whether to set up Limine with Windows Dual boot";
   };
 
   config = mkIf cfg.enable {
