@@ -41,9 +41,9 @@ in {
       peers = [ 
         {
           publicKey = "KHp3k54oKwvA61O96yCYzjKusJbypxblkj2YFhNweR0=";
-          allowedIPs = [ "10.100.0.1/32" "192.168.0.0/24" ];
-          endpoint = "ssh.atlasworld.fr:51820";
-          persistentKeepalive = 25;
+          allowedIPs = [ "10.0.0.1/32" "192.168.0.0/24" ];
+          endpoint = "94.104.97.244:51820";
+          persistentKeepalive = 21;
         } 
       ];
     };
