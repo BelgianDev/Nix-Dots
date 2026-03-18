@@ -14,7 +14,7 @@ in {
     boot.loader = {
       limine = {
         enable = true;  
-        extraEntries = mkIf cfg.dual_win ''
+        extraEntries = mkIf cfg.dual-win ''
           /Windows 11
             protocol: efi
             path: boot():/EFI/Microsoft/Boot/bootmgfw.efi

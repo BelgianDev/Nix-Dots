@@ -32,11 +32,10 @@
     privateKeyFile = config.sops.secrets."wireguard/laptop/key".path;
   };
   
-
   # Apps
   module.app = {
     gaming.steam.enable = true;
-    virtualisation.boxes.enable = true;
+    virtualisation.boxes.enable = false;
 
     dev = {
       rust.enable = false;
@@ -52,7 +51,7 @@
 
   module.kernel.boot.limine = {
     enable = true;
-    dual_win = true;
+    dual-win = true;
   };
 
   system.stateVersion = "25.11"; # Did you read the comment?
