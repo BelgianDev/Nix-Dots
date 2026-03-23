@@ -80,6 +80,9 @@
     pkgs.unstable.jdk17
     pkgs.unstable.jdk8
 
+    # Lab
+    kubectl
+
     # Random Stuff
     pipes-rs
     figlet
