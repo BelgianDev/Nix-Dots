@@ -46,6 +46,7 @@
 
     # Networking
     iperf3
+    arping
 
     # Secrets
     sops
@@ -59,6 +60,7 @@
     pkgs.unstable.jdk25
     pkgs.unstable.jdk21
     pkgs.unstable.jdk17
+    
     # Macros
     xdotool
 
