@@ -84,6 +84,8 @@
 
     # Lab
     kubectl
+    fluxcd
+    kubernetes-helm
 
     # Random Stuff
     pipes-rs
