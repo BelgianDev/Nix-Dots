@@ -82,11 +82,6 @@
     pkgs.unstable.jdk17
     pkgs.unstable.jdk8
 
-    # Lab
-    kubectl
-    fluxcd
-    kubernetes-helm
-
     # Random Stuff
     pipes-rs
     figlet

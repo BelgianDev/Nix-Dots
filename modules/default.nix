@@ -21,6 +21,7 @@
     ./app/dev/docker.nix
     ./app/dev/c.nix
     ./app/dev/web.nix
+    ./app/dev/kubernetes.nix
     ./app/browser/firefox.nix
     ./app/browser/zen.nix
     ./app/chat/whatsapp.nix
@@ -84,6 +85,8 @@
 
       analysis.enable = lib.mkDefault false;
       docker.enable = lib.mkDefault true;
+
+      kubernetes.enable = lib.mkDefault true;
     };
 
     gaming = {
