@@ -15,6 +15,7 @@ in {
       kubectl
       fluxcd
       lens
+      kustomize
     ];
   };
 }

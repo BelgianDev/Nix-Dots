@@ -41,6 +41,10 @@
   networking.firewall.enable = false; # Fuck the firewall
   networking.networkmanager.enable = true;
 
+  networking.extraHosts = ''
+    homepage.home.lab 192.168.0.22
+  '';
+
   module = {
     hardware = {
       amd.enable = true;
