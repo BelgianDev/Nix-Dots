@@ -5,7 +5,7 @@ with lib;
 let
   cfg = config.module.service.dns;
 in {
-  options.module.service.bdns = {
+  options.module.service.dns = {
     enable = mkEnableOption "Enables custom DNS.";
   };
 
