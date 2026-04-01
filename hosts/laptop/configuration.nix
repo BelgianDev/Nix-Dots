@@ -20,6 +20,8 @@
   networking.firewall.enable = false;
   networking.networkmanager.enable = true;
 
+  module.service.dns.enable = true;
+
   # Hardware
   module.hardware.thermal.enable = true;
   module.kernel.intel.enable = true;

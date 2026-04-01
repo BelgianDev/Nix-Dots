@@ -57,6 +57,7 @@
     ./service/bluetooth.nix
     ./service/wireguard.nix
     ./service/ntfy.nix
+    ./service/dns.nix
 
     ./tool/android.nix
   ];
@@ -148,6 +149,7 @@
     bluetooth.enable = lib.mkDefault true;
     wireguard.enable = lib.mkDefault true;
     ntfy.enable = lib.mkDefault true;
+    dns.enable = lib.mkDefault false;
   };
   
   # Required Programs
