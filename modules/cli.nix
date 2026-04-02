@@ -47,6 +47,7 @@
     # Networking
     iperf3
     arping
+    dig # DNS Testing
 
     # Secrets
     sops
