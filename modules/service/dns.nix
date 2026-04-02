@@ -10,9 +10,18 @@ in {
   };
 
   config = mkIf cfg.enable {
-    networking.nameservers = [
-      "192.168.0.135"
-      "1.1.1.1"
-    ];
+
+    networking = {
+      networkmanager.dns = "none";
+      dhcpcd.extraConfig = ''
+        nohook resolv.conf
+      '';
+      nameservers = [
+        "192.168.0.135"
+        "1.1.1.1"
+      ];
+    };
+    
+    services.resolved.enable = false;
   };
 }
