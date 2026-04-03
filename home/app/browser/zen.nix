@@ -43,6 +43,7 @@ in {
         settings = {
           "browser.sessionstore.resume_from_crash" = false;
           "browser.startup.page" = 1;
+          "zen.urlbar.replace-newtab" = false;
         };
 
         extensions.packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
