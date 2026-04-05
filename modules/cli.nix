@@ -49,6 +49,10 @@
     arping
     dig # DNS Testing
 
+    # Wireless
+    wavemon
+    wirelesstools
+
     # Secrets
     sops
 
