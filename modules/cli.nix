@@ -41,6 +41,7 @@
     usbutils
     pciutils
     ethtool
+    
     sysstat
     smartmontools
 
