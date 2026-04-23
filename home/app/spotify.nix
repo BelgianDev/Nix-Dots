@@ -26,7 +26,6 @@ in {
       enabledExtensions = with spicePkgs.extensions; [
         adblock
         trashbin
-        oneko
       ];
     };
   };
