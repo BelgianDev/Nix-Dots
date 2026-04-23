@@ -43,7 +43,8 @@ in {
         settings = {
           "browser.sessionstore.resume_from_crash" = false;
           "browser.startup.page" = 1;
-          "zen.urlbar.replace-newtab" = false;
+          "zen.urlbar.replace-newtab" = true;
+          "browser.startup.homepage" = "http://dashboard.home";
         };
 
         extensions.packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
