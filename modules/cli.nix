@@ -15,7 +15,10 @@
     parted
     age
     sops
+
+    # Music
     yt-dlp
+    jellyfin-tui
 
     # Formatters
     nixfmt-rfc-style
