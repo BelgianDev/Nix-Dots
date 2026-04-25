@@ -29,6 +29,7 @@
     ./app/creation/aseprite.nix
     ./app/creation/blockbench.nix
     ./app/creation/audacity.nix
+    ./app/creation/picard.nix
     ./app/gaming/steam.nix
     ./app/gaming/minecraft.nix
     ./app/gaming/switch.nix
@@ -105,6 +106,7 @@
       aseprite.enable = lib.mkDefault false;
       blockbench.enable = lib.mkDefault false;
       audacity.enable = lib.mkDefault false;
+      picard.enable = lib.mkDefault true;
     };
 
     chat = {

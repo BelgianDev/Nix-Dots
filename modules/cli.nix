@@ -15,6 +15,7 @@
     parted
     age
     sops
+    yt-dlp
 
     # Formatters
     nixfmt-rfc-style
