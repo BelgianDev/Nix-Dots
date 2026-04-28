@@ -26,7 +26,7 @@
   module.hardware.thermal.enable = true;
   module.kernel.intel.enable = true;
 
-  module.desktop.niri.enable = true;
+  module.desktop.niri.enable = false;
 
   module.service.wireguard = {
     enable = true;
