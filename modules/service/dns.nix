@@ -17,7 +17,7 @@ in {
         nohook resolv.conf
       '';
       nameservers = [
-        "192.168.0.135"
+        "192.168.0.1"
         "1.1.1.1"
       ];
     };
