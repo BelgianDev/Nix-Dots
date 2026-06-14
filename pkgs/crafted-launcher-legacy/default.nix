@@ -21,6 +21,7 @@ let
     libjack2
     libpulseaudio
     pipewire
+    flite
 
     ## glfw
     libGL

@@ -58,9 +58,11 @@
       };
 
       dev = {
-        rust.enable = true;
-        web.enable = true;
+        rust.enable = false;
+        web.enable = false;
         c.enable = true;
+        analysis.enable = true;
+        java.enable = true;
       };
 
       gaming = {

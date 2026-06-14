@@ -16,7 +16,7 @@ in {
     };
 
     environment.systemPackages = with pkgs; [
-      postman
+      bruno
       ghex
 
       # Wireshark
