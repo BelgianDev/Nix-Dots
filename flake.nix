@@ -46,7 +46,7 @@
     };
   };
 
-  outputs = { nixpkgs, stylix, sops, ... }@inputs: 
+  outputs = { nixpkgs, stylix, sops, niri, ... }@inputs: 
     let
       system = "x86_64-linux";
 
@@ -58,6 +58,7 @@
 
         stylix.nixosModules.stylix
         sops.nixosModules.sops
+        niri.nixosModules.niri
       ];
     in
     {

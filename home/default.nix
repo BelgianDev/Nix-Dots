@@ -13,12 +13,15 @@
     ./cli/cava.nix
 
     ./desktop/gnome.nix
+    ./desktop/niri.nix
     
     ./shell/fish.nix
   ];
 
   home = {
     desktop.gnome.enable = lib.mkDefault true;
+    desktop.niri.enable = lib.mkDefault true;
+
     shell.fish.enable = lib.mkDefault true;
 
     cli = {
