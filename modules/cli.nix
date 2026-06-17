@@ -21,7 +21,7 @@
     jellyfin-tui
 
     # Formatters
-    nixfmt-rfc-style
+    nixfmt
 
     # Archives
     zip

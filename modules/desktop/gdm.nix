@@ -10,9 +10,6 @@ in {
   };
 
   config = mkIf cfg.enable {
-    services.displayManager.gdm = {
-      enable = true;
-      wayland = true;
-    };
+    services.displayManager.gdm.enable = true;
   };
 }

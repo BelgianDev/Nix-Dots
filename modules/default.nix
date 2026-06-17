@@ -175,11 +175,11 @@
     libGL
     libGL.dev
 
-    xorg.libX11
-    xorg.libXcursor
-    xorg.libXrandr
-    xorg.libXi
-    xorg.libXxf86vm
+    libX11
+    libXcursor
+    libXrandr
+    libXi
+    libXxf86vm
 
     icu
   ];

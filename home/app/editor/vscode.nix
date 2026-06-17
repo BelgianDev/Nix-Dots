@@ -10,9 +10,8 @@ in {
   };
 
   config = mkIf cfg.enable {
-    programs.vscode = {
+    programs.vscodium = {
       enable = true;
-      package = pkgs.vscodium;
 
       profiles.default = {
         enableUpdateCheck = false; # Fuck off update popups

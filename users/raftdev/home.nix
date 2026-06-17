@@ -10,7 +10,7 @@
 
   home = {
     homeDirectory = "/home/raftdev";
-    stateVersion = "25.11";
+    stateVersion = "26.05";
   };
 
   programs.git = {
