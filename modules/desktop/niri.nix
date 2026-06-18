@@ -13,11 +13,13 @@ in {
     module.desktop.gdm.enable = true; # Enable GDM
     programs.niri = {
       enable = true;
-      package = pkgs.niri-stable;
+      package = pkgs.niri-unstable;
     };
 
     environment.systemPackages = with pkgs; [
       vicinae
+      awww
+      xwayland-satellite
     ];
   };
 }

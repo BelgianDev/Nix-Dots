@@ -25,7 +25,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Zen - Browser
+    # Zen - BrowserS
     zen = {
      url = "github:0xc000022070/zen-browser-flake";
       inputs = {
