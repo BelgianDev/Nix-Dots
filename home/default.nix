@@ -1,7 +1,9 @@
-{ lib, ... }: 
+{ lib, inputs, ... }: 
 
 {
   imports = [
+    inputs.noctalia.homeModules.default
+    
     ./app/browser/zen.nix
     ./app/editor/vscode.nix
     ./app/spotify.nix

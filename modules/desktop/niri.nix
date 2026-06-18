@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 with lib;
 
@@ -18,8 +18,9 @@ in {
 
     environment.systemPackages = with pkgs; [
       vicinae
-      awww
       xwayland-satellite
+
+      inputs.noctalia.packages.${system}.default
     ];
   };
 }

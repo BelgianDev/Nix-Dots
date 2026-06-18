@@ -25,7 +25,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Zen - BrowserS
+    noctalia = {
+      url = "github:noctalia-dev/noctalia/legacy-v4";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
+
+    # Zen - Browser
     zen = {
      url = "github:0xc000022070/zen-browser-flake";
       inputs = {
