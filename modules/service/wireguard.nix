@@ -40,10 +40,10 @@ in {
 
       peers = [ 
         {
-          publicKey = "MwSxLOKB9TBwbiV6+AgqbEaXAEfwBtvepB06z1Wy0mM=";
+          publicKey = "H/Uj/ic/P8CHGk4nl7fSEFXtgOhAWFWhF3d9HjAo7D4=";
           allowedIPs = [ "10.10.10.1/32" "192.168.0.0/24" ];
-          endpoint = "94.104.200.219:51820";
-          persistentKeepalive = 21;
+          endpoint = "vpn.atlasworld.fr:51820";
+          persistentKeepalive = 22;
         } 
       ];
     };

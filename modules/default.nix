@@ -130,7 +130,7 @@
     gdm.enable = lib.mkDefault true;
 
     gnome.enable = lib.mkDefault true;
-    niri.enable = lib.mkDefault false;
+    niri.enable = lib.mkDefault true;
   };
 
   # Kernel Stuff

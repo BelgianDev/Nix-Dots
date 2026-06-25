@@ -26,11 +26,10 @@
   module.hardware.thermal.enable = true;
   module.kernel.intel.enable = true;
 
-  module.desktop.niri.enable = false;
 
   module.service.wireguard = {
     enable = true;
-    localAddress = "10.100.0.4/32";
+    localAddress = "10.10.10.3/32";
     privateKeyFile = config.sops.secrets."wireguard/laptop/key".path;
   };
   

@@ -10,7 +10,8 @@ in {
   };
 
   config = mkIf cfg.enable {
-    module.desktop.gdm.enable = true; # Enable GDM
+    module.desktop.gdm.enable = true; 
+    
     programs.niri = {
       enable = true;
       package = pkgs.niri-unstable;

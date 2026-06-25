@@ -14,36 +14,31 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/93f16e93-c203-4fb2-b039-2e0afb6eb5f7";
+    { device = "/dev/disk/by-uuid/4c9dce5b-8b1d-4c8b-bc9d-8537b81a2bb1";
       fsType = "btrfs";
-      options = [ "subvol=@" ];
+    };
+
+  fileSystems."/home" =
+    { device = "/dev/disk/by-uuid/4c9dce5b-8b1d-4c8b-bc9d-8537b81a2bb1";
+      fsType = "btrfs";
+      options = [ "subvol=home" ];
+    };
+
+  fileSystems."/nix" =
+    { device = "/dev/disk/by-uuid/4c9dce5b-8b1d-4c8b-bc9d-8537b81a2bb1";
+      fsType = "btrfs";
+      options = [ "subvol=nix" ];
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/27EB-E4C6";
+    { device = "/dev/disk/by-uuid/8EDD-66FE";
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/e7f974dd-93f8-4f63-bcb2-c7a9f5bf0336"; }
+    [ { device = "/dev/disk/by-uuid/f2891c4b-93af-4850-bdc8-6d2541bcac42"; }
     ];
-    
-  fileSystems."/mnt/windows" = {
-    device = "/dev/disk/by-uuid/28AA6903AA68CF3E";
-    fsType = "ntfs-3g";
-    options = [ "nofail" "noatime" "umask=0000" "windows_names" "big_writes" ];
-  };
-
-  environment.systemPackages = with pkgs; [ ntfs3g ];
-
-  # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
-  # (the default) this is the recommended approach. When using systemd-networkd it's
-  # still possible to use this option, but it's recommended to use it in conjunction
-  # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
-  networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.enp2s0.useDHCP = lib.mkDefault true;
-  # networking.interfaces.wlp3s0.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
