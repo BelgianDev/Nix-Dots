@@ -7,6 +7,7 @@
     ./app/browser/zen.nix
     ./app/editor/vscode.nix
     ./app/spotify.nix
+    ./app/mangohud.nix
     ./app/terminal/alacritty.nix
     ./app/chat/discord.nix
 
@@ -34,6 +35,7 @@
 
     app = {
       spotify.enable = true;
+      mangohud.enable = true;
 
       editor.vscode.enable = lib.mkDefault true;
       terminal.alacritty.enable = lib.mkDefault true;
