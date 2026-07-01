@@ -15,10 +15,9 @@ in {
 
     # Path to the private key file
     privateKeyFile = mkOption {
-      type = types.path;
-      description = "Path to the private key for this device";
+      type = types.str;
+      description = "Private key file for this device";
     };
-
   };
 
   config = mkIf cfg.enable {
@@ -31,21 +30,25 @@ in {
       wireguard-tools
     ];
 
-    services.mullvad-vpn.enable = true;
-    networking.wireguard.interfaces.wg0 = {
-      ips = [ cfg.localAddress ];
-      listenPort = 51820;
+    #services.mullvad-vpn.enable = true;
+    networking.wireguard = {
+      useNetworkd = true;
 
-      privateKeyFile = cfg.privateKeyFile;
+      interfaces.wg0 = {
+        ips = [ cfg.localAddress ];
+        listenPort = 51820;
 
-      peers = [ 
-        {
-          publicKey = "H/Uj/ic/P8CHGk4nl7fSEFXtgOhAWFWhF3d9HjAo7D4=";
-          allowedIPs = [ "10.10.10.1/32" "192.168.0.0/24" ];
-          endpoint = "vpn.atlasworld.fr:51820";
-          persistentKeepalive = 22;
-        } 
-      ];
+        privateKeyFile = cfg.privateKeyFile;
+
+        peers = [ 
+          {
+            publicKey = "d599yMLsdVFEWz0mnkpOYNtEuQ+hn/B5WpNNTLioiwA=";
+            allowedIPs = [ "10.10.10.1/32" "192.168.0.0/24" ];
+            endpoint = "vpn.atlasworld.fr:51820";
+            persistentKeepalive = 22;
+          } 
+        ];
+      };
     };
   };
 }

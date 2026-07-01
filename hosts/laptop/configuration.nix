@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 
 {
   imports =
@@ -26,11 +26,10 @@
   module.hardware.thermal.enable = true;
   module.kernel.intel.enable = true;
 
-
   module.service.wireguard = {
     enable = true;
     localAddress = "10.10.10.3/32";
-    privateKeyFile = config.sops.secrets."wireguard/laptop/key".path;
+    privateKeyFile = config.sops.secrets.wireguard_laptop.path;
   };
   
   # Apps

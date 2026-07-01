@@ -16,8 +16,10 @@
         owner = "raftdev";
       };
 
-      "wireguard/desktop/key" = {};
-      "wireguard/laptop/key" = {};
+      wireguard_laptop = {
+        key = "wireguard_laptop";
+        owner = "root";
+      };
     };
   };
 
