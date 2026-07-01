@@ -16,9 +16,8 @@
     age
     sops
 
-    # Music
+    # Media
     yt-dlp
-    jellyfin-tui
 
     # Formatters
     nixfmt

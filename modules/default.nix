@@ -35,6 +35,7 @@
     ./app/gaming/switch.nix
     ./app/sftp/filezilla.nix
     ./app/virtualization/boxes.nix
+    ./app/music/feishin.nix
 
     ./hardware/amd.nix
     ./hardware/firmware.nix
@@ -77,6 +78,10 @@
 
     sftp.filezilla.enable = lib.mkDefault true;
     virtualisation.boxes.enable = lib.mkDefault false;
+
+    music = {
+      feishin.enable = true;
+    };
 
     dev = {
       java.enable = lib.mkDefault true;
