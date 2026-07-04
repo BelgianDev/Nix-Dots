@@ -183,6 +183,16 @@ in {
           }
         }
 
+        output "eDP-1" {
+          scale 1
+          focus-at-startup
+          position x=0 y=0
+          
+          hot-corners {
+            off
+          }
+        }
+
         layout {
           gaps 10
 

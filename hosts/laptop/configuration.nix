@@ -40,6 +40,7 @@
     dev = {
       rust.enable = false;
       web.enable = true;
+      analysis.enable = true;
     };
 
     creation = {
