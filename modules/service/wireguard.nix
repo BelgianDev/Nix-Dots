@@ -30,7 +30,7 @@ in {
       wireguard-tools
     ];
 
-    #services.mullvad-vpn.enable = true;
+    services.mullvad-vpn.enable = true;
     networking.wireguard = {
       useNetworkd = true;
 
