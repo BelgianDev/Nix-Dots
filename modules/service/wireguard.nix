@@ -42,7 +42,7 @@ in {
 
         peers = [ 
           {
-            publicKey = "d599yMLsdVFEWz0mnkpOYNtEuQ+hn/B5WpNNTLioiwA=";
+            publicKey = "BCHyC+9csZO7h6629qKH8BxrO9kG/gGdt2kb0aztklI=";
             allowedIPs = [ "10.10.10.1/32" "192.168.0.0/24" ];
             endpoint = "vpn.atlasworld.fr:51820";
             persistentKeepalive = 22;
