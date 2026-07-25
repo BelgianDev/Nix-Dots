@@ -15,6 +15,7 @@
     parted
     age
     sops
+    openssl
 
     # Media
     yt-dlp
