@@ -43,7 +43,7 @@ in {
           "browser.sessionstore.resume_from_crash" = false;
           "browser.startup.page" = 1;
           "zen.urlbar.replace-newtab" = true;
-          "browser.startup.homepage" = "http://dashboard.home";
+          "browser.startup.homepage" = "https://dashboard.local.raftdev.be";
         };
 
         extensions.packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [

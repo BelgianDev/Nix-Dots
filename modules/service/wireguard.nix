@@ -43,7 +43,7 @@ in {
         peers = [ 
           {
             publicKey = "BCHyC+9csZO7h6629qKH8BxrO9kG/gGdt2kb0aztklI=";
-            allowedIPs = [ "10.10.10.1/32" "192.168.0.0/24" ];
+            allowedIPs = [ "10.10.10.1/32" "192.168.0.0/16" ];
             endpoint = "vpn.atlasworld.fr:51820";
             persistentKeepalive = 22;
           } 
