@@ -11,7 +11,15 @@ in {
 
   config = mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
-      element-desktop
+      (symlinkJoin {
+          name = "element-desktop-wrapped";
+          paths = [ element-desktop ];
+          nativeBuildInputs = [ makeWrapper ];
+          postBuild = ''
+            wrapProgram $out/bin/element-desktop \
+              --add-flags '--password-store="gnome-libsecret"'
+          '';
+        })
     ];
   };
 }

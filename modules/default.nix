@@ -61,6 +61,7 @@
     ./service/wireguard.nix
     ./service/ntfy.nix
     ./service/dns.nix
+    ./service/keyring.nix
 
     ./tool/android.nix
   ];
@@ -159,6 +160,7 @@
     wireguard.enable = lib.mkDefault true;
     ntfy.enable = lib.mkDefault true;
     dns.enable = lib.mkDefault false;
+    keyring.enable = lib.mkDefault true;
   };
   
   # Required Programs
