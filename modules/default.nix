@@ -24,7 +24,8 @@
     ./app/dev/kubernetes.nix
     ./app/browser/firefox.nix
     ./app/browser/zen.nix
-    ./app/chat/whatsapp.nix
+    ./app/chat/matrix.nix
+    ./app/chat/whatsapp.nxix
     ./app/chat/teams.nix
     ./app/creation/aseprite.nix
     ./app/creation/blockbench.nix
@@ -115,8 +116,9 @@
     };
 
     chat = {
+      matrix.enable = lib.mkDefault true;
       teams.enable = lib.mkDefault true;
-      whatsapp.enable = lib.mkDefault true;
+      whatsapp.enable = lib.mkDefault false;
     };
   };
 
