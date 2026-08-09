@@ -25,7 +25,7 @@
     ./app/browser/firefox.nix
     ./app/browser/zen.nix
     ./app/chat/matrix.nix
-    ./app/chat/whatsapp.nxix
+    ./app/chat/whatsapp.nix
     ./app/chat/teams.nix
     ./app/creation/aseprite.nix
     ./app/creation/blockbench.nix

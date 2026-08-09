@@ -5,7 +5,7 @@ with lib;
 let
   cfg = config.module.app.chat.matrix;
 in {
-  options.module.app.chat.matix = {
+  options.module.app.chat.matrix = {
     enable = mkEnableOption "Enable Matrix.";
   };
 
