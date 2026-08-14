@@ -113,7 +113,7 @@
       aseprite.enable = lib.mkDefault false;
       blockbench.enable = lib.mkDefault false;
       audacity.enable = lib.mkDefault false;
-      picard.enable = lib.mkDefault true;
+      picard.enable = lib.mkForce false; # Broken package
     };
 
     chat = {

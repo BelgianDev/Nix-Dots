@@ -245,7 +245,7 @@ in {
         { package = vitals; }
         # { package = forge; } - Looking for maintainers, so support isn't great in Gnome 49
         { package = pop-shell; }
-        { package = no-title-bar; }
+        # { package = no-title-bar; } - Unmaintained
         { package = gnome-40-ui-improvements; }
       ];
     };
