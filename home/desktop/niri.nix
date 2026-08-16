@@ -96,7 +96,7 @@ in {
         screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
         input {
-          focus-follows-mouse
+          focus-follows-mouse max-scroll-amount="0%"
 
           keyboard {
             xkb {
