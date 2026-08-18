@@ -20,6 +20,7 @@ in {
     environment.systemPackages = with pkgs; [
       vicinae
       xwayland-satellite
+      quickshell
 
       inputs.noctalia.packages.${system}.default
     ];

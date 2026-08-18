@@ -15,7 +15,7 @@ in {
     };
 
     programs.noctalia-shell = {
-      enable = true;
+      enable = false;
       settings = {
         wallpaper.enabled = false;
         colorSchemes = {
