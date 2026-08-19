@@ -21,8 +21,6 @@ in {
       vicinae
       xwayland-satellite
       quickshell
-
-      inputs.noctalia.packages.${system}.default
     ];
   };
 }

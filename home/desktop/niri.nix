@@ -90,7 +90,6 @@ in {
       config = ''
         spawn-at-startup "vicinae" "server"
         spawn-at-startup "awww-daemon"
-        spawn-at-startup "noctalia-shell"
 
         prefer-no-csd
         screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
