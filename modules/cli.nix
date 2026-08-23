@@ -16,6 +16,7 @@
     age
     sops
     openssl
+    jq
 
     # Media
     yt-dlp
