@@ -1,0 +1,202 @@
+[bar]
+backgroundOpacity = 0.32000000000000001
+barType = "framed"
+contentPadding = 24
+density = "comfortable"
+order = [ "widgets" ]
+position = "left"
+showCapsule = false
+widgetSpacing = 24
+
+    [bar.widgets]
+    background_opacity = 0.74999998323619366
+    center = [ "audio_visualizer" ]
+    end = [ "notifications", "network", "bluetooth", "control-center", "session" ]
+    margin_edge = 7
+    padding = 18
+    position = "left"
+    start = [ "clock", "battery", "cpu", "ram", "temp", "launcher" ]
+    thickness = 44
+    widget_spacing = 17
+
+        [[bar.widgets.left]]
+        id = "Clock"
+
+        [[bar.widgets.left]]
+        id = "SystemMonitor"
+
+        [[bar.widgets.left]]
+        id = "MediaMini"
+
+        [[bar.widgets.right]]
+        id = "Tray"
+
+        [[bar.widgets.right]]
+        id = "Battery"
+
+        [[bar.widgets.right]]
+        id = "Volume"
+
+        [[bar.widgets.right]]
+        id = "ControlCenter"
+
+[control_center]
+hidden_tabs = [ "screen-time" ]
+show_shortcut_labels = false
+
+    [control_center.calendar]
+    show_week_numbers = true
+
+[desktop_widgets]
+enabled = false
+schema_version = 2
+widget_order = []
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget]
+
+[general]
+radiusRatio = 0.5
+telemetryEnabled = false
+
+[location]
+address = "Brussels, Belgium"
+autoLocate = false
+firstDayOfWeek = 0
+name = "Brussels Belgium"
+
+[lockscreen]
+blurred_desktop = true
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 2
+widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-login-box@DP-3" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-3"]
+    box_height = 196.0
+    box_width = 720.0
+    cx = 960.0
+    cy = 961.0
+    output = "DP-3"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-3".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1"]
+    box_height = 196.0
+    box_width = 720.0
+    cx = 960.0
+    cy = 961.0
+    output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+[notification]
+background_opacity = 0.99999997764825821
+border = false
+history_retention_hours = 1
+layer = "overlay"
+max_visible = 3
+position = "top_center"
+
+[plugins]
+enabled = [ "davemhammer/k8s-status" ]
+
+[shell]
+clipboard_enabled = false
+corner_radius_scale = 0.5000000074505806
+external_ip_enabled = true
+screen_time_enabled = true
+
+    [shell.panel]
+    open_near_click_control_center = true
+    transparency_mode = "glass"
+
+[theme]
+builtin = "Catppuccin"
+community_palette = "Osaka jade"
+mode = "dark"
+source = "community"
+wallpaper_scheme = "m3-content"
+
+    [theme.templates]
+    enable_builtin_templates = false
+    enable_community_templates = false
+
+[wallpaper]
+enabled = false
+
+[widget.audio_visualizer]
+bands = 50
+capsule = true
+capsule_padding = 15
+capsule_radius = "auto"
+color_2 = "secondary"
+show_when_idle = true
+width = 300
+
+    [widget.audio_visualizer.actions]
+    left = "panel-toggle control-center media"
+
+[widget.cpu]
+show_value = false
+
+[widget.network]
+show_label = false
+
+[widget.ram]
+show_value = false
+
+[widget.temp]
+show_value = false
+
+[widget.tray]
+drawer = true
+
+[widget.volume]
+show_label = false

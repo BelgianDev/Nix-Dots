@@ -21,7 +21,7 @@ in {
       vicinae
       xwayland-satellite
 
-      inputs.noctalia.packages.${system}.default
+      inputs.noctalia.packages.${stdenv.hostPlatform.system}.default
     ];
   };
 }
