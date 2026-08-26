@@ -20,7 +20,9 @@ in {
     environment.systemPackages = with pkgs; [
       vicinae
       xwayland-satellite
+      
       quickshell
+      inputs.qml-niri.packages."${pkgs.stdenv.hostPlatform.system}".default
     ];
   };
 }

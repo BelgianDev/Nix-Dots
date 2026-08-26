@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, ... }:
 
 with lib;
 
@@ -12,78 +12,6 @@ in {
   config = mkIf cfg.enable {
     services.awww = {
       enable = true;
-    };
-
-    programs.noctalia-shell = {
-      enable = false;
-      settings = {
-        wallpaper.enabled = false;
-        colorSchemes = {
-          useWallpaperColors = false;
-          predefinedScheme = "Catppuccin";
-          darkMode = true;
-        };
-
-        general = {
-          telemetryEnabled = false;
-          radiusRatio = 0.5;
-        };
-
-        location = {
-          name = "Brussels Belgium";
-          firstDayOfWeek = 0;
-          autoLocate = false;
-        };
-
-        bar = {
-          barType = "framed";
-          density = "comfortable";
-          position = "left";
-          showCapsule = false;
-          widgetSpacing = 24;
-          contentPadding = 24;
-          backgroundOpacity = mkForce 0.32;
-
-        
-          widgets = {
-            left = [
-              {
-                id = "Clock";
-              }
-              {
-                id = "SystemMonitor";
-              }
-              {
-                id = "MediaMini";
-              }
-            ];
-
-            center = [
-              {
-                id = "NotificationHistory";
-              }
-              {
-                id = "Workspace";
-              }
-            ];
-
-            right = [
-              {
-                id = "Tray";
-              }
-              {
-                id = "Battery";
-              }
-              {
-                id = "Volume";
-              }
-              {
-                id = "ControlCenter";  
-              }
-            ];
-          };
-        };
-      };
     };
 
     programs.niri = {
