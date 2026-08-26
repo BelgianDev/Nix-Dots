@@ -136,7 +136,7 @@ in {
           focus-ring {
             width 3
           
-            active-gradient from="#ca9ee6" to="#eebebe" angle=45
+            active-gradient from="#dfe7e2" to="#489963" angle=45
           }
 
           shadow {

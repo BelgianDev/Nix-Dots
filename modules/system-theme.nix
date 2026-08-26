@@ -15,7 +15,7 @@
 
   stylix.polarity = "dark";
   stylix.image = ./../assets/wallpaper/solar-system-catppuccin.jpg;
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/material-darker.yaml";
   stylix.override = {
     #base03 = "C6C6C6"; # Improves readability on Discord and Alacritty, hasn't been an issue somewhere else so ¯\_(ツ)_/¯
   };
