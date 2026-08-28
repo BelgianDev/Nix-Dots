@@ -32,6 +32,7 @@ in {
           focus-follows-mouse max-scroll-amount="0%"
 
           keyboard {
+            numlock
             xkb {
               layout "be"
               model "pc104"
@@ -41,6 +42,7 @@ in {
 
           touchpad {
             natural-scroll
+            accel-speed 0.4
           }
         }
 
