@@ -9,6 +9,7 @@
     nano
     tree
     ffmpeg
+    cdrtools
     killall
     ipcalc
     screen
