@@ -145,7 +145,7 @@ max_visible = 3
 position = "top_center"
 
 [plugins]
-enabled = [ "davemhammer/k8s-status" ]
+enabled = [  ]
 
 [shell]
 clipboard_enabled = false
