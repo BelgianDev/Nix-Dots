@@ -18,6 +18,7 @@
     sops
     openssl
     jq
+    rclone
 
     # Media
     yt-dlp
