@@ -21,11 +21,6 @@ in {
   };
 
   config = mkIf cfg.enable {
-    networking.firewall = {
-      allowedUDPPorts = [ 51820 ];
-      checkReversePath = "loose";
-    };
-
     environment.systemPackages = with pkgs; [
       wireguard-tools
     ];
@@ -36,16 +31,15 @@ in {
 
       interfaces.wg0 = {
         ips = [ cfg.localAddress ];
-        listenPort = 51820;
 
         privateKeyFile = cfg.privateKeyFile;
 
         peers = [ 
           {
-            publicKey = "BCHyC+9csZO7h6629qKH8BxrO9kG/gGdt2kb0aztklI=";
-            allowedIPs = [ "10.10.10.1/32" "192.168.0.0/16" ];
-            endpoint = "vpn.atlasworld.fr:51820";
-            persistentKeepalive = 22;
+            publicKey = "DP8MXft57B4QtA6H3A06aGEHBnCIPV6dRiBqX986OUY=";
+            allowedIPs = [ "192.168.0.0/16" "10.10.2.0/24" ];
+            endpoint = "vpn.raftdev.com:51821";
+            persistentKeepalive = 25;
           } 
         ];
       };

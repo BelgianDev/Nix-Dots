@@ -28,7 +28,7 @@
 
   module.service.wireguard = {
     enable = true;
-    localAddress = "10.10.10.3/32";
+    localAddress = "10.10.2.3/32";
     privateKeyFile = config.sops.secrets.wireguard_laptop.path;
   };
   
