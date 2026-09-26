@@ -39,6 +39,7 @@
     ./app/music/feishin.nix
 
     ./hardware/amd.nix
+    ./hardware/fingerprint.nix
     ./hardware/firmware.nix
     ./hardware/printers.nix
     ./hardware/ssd.nix
@@ -125,6 +126,7 @@
 
   module.hardware = {
     printers.enable = lib.mkDefault true;
+    fingerprint.enable = lib.mkDefault false;
     ssd.enable = lib.mkDefault true;
     thermal.enable = lib.mkDefault false;
     amd.enable = lib.mkDefault false;
