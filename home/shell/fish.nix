@@ -23,6 +23,20 @@ in {
         atuin init fish | source
       '';
 
+      functions = {
+        bake = {
+          description = "Destroy video and audio using FFmpeg";
+          body = ''
+            if test (count $argv) -lt 2
+                echo "Usage: bake <input_file> <output_file>"
+                return 1
+            end
+
+            ${pkgs.ffmpeg}/bin/ffmpeg -i $argv[1] -vf "scale=320:-2,fps=12,eq=contrast=1.6:saturation=3.0" -c:v libx264 -crf 44 -preset fast -g 240 -bf 0 -error_rate 0.08 -pix_fmt yuv420p -af "volume=10dB,aresample=4000,volume=-3dB" -c:a aac -b:a 8k $argv[2]
+          '';
+        };
+      };
+
       shellAliases = {
         ls = "eza -a";
         cat = mkIf (config.home.cli.bat.enable) "bat";
