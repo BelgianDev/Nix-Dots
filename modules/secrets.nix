@@ -1,26 +1,27 @@
-{ config, ... }:
+{ config, lib, ... }:
 
-{
-  sops = {
-    defaultSopsFile = ../secrets/secrets.yaml;
+with lib;
 
-    age = {
-      keyFile = "/home/raftdev/.config/sops/age/keys.txt";     
+let
+  cfg = config.module.secrets;
+in {
+  options.module.secrets = {
+    wireguard = mkOption {
+      type = types.str;
+      description = "Wireguard key path";
     };
 
+    ssh-key = mkOption {
+      type = types.str;
+      description = "Device SSH-key";
+    };
+  };
+
+  config.sops = {
+    defaultSopsFile = ../secrets/secrets.yaml;
+    age.keyFile = "/home/raftdev/.config/sops/age/keys.txt";     
+
     secrets = {
-      aw_username = {
-        owner = "raftdev";
-      };
-      aw_password = {
-        owner = "raftdev";
-      };
-
-      wireguard_laptop = {
-        key = "wireguard_laptop";
-        owner = "root";
-      };
-
       # RClone
 
       "rclone/media/user" = {
@@ -48,11 +49,24 @@
         key = "rclone/cloud/host";
         owner = "raftdev";
       };
-    };
-  };
 
-  environment.sessionVariables = {
-    REPO_USERNAME = "$(< ${config.sops.secrets.aw_username.path})";
-    REPO_PASSWORD = "$(< ${config.sops.secrets.aw_password.path})";
+      # Wireguard
+
+      wireguard = mkIf (cfg.wireguard != null) {
+        key = "wireguard/${cfg.wireguard}";
+        owner = "root";
+        group = "root";
+        mode = "0600";
+      };
+
+      # SSH
+
+      ssh-key = mkIf (cfg.ssh-key != null) {
+        key = "ssh/${cfg.ssh-key}";
+        owner = "raftdev";
+        mode = "0600";
+        path = "/home/raftdev/.ssh/id_ed25519";
+      };
+    };
   };
 }

@@ -19,10 +19,13 @@
     unstable = false;
   };
 
+  module.secrets = {
+    ssh-key = "desktop";
+  };
+
+
   module.service.wireguard = {
     enable = false;
-    localAddress = "10.0.0.2/32";
-    privateKeyFile = config.sops.secrets."wireguard/desktop/key".path;
   };
 
   services.flatpak.enable = true;

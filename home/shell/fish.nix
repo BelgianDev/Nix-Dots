@@ -35,6 +35,18 @@ in {
             ${pkgs.ffmpeg}/bin/ffmpeg -i $argv[1] -vf "scale=320:-2,fps=12,eq=contrast=1.6:saturation=3.0" -c:v libx264 -crf 44 -preset fast -g 240 -bf 0 -error_rate 0.08 -pix_fmt yuv420p -af "volume=10dB,aresample=4000,volume=-3dB" -c:a aac -b:a 8k $argv[2]
           '';
         };
+
+        unlock = {
+          description = "Unlock an encrypted age file";
+          body = ''
+            if test (count $argv) -lt 1
+                echo "Usage: unlock <input_file>"
+                return 1
+            end
+
+            ${pkgs.age}/bin/age -d $argv[1]
+          '';
+        };
       };
 
       shellAliases = {

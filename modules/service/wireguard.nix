@@ -12,12 +12,6 @@ in {
       type = types.str;
       description = "IP of this machine on the VPN network (e.g., 10.100.0.2/24)";
     };
-
-    # Path to the private key file
-    privateKeyFile = mkOption {
-      type = types.str;
-      description = "Private key file for this device";
-    };
   };
 
   config = mkIf cfg.enable {
@@ -32,7 +26,7 @@ in {
       interfaces.wg0 = {
         ips = [ cfg.localAddress ];
 
-        privateKeyFile = cfg.privateKeyFile;
+        privateKeyFile =  config.sops.secrets.wireguard.path;
 
         peers = [ 
           {
