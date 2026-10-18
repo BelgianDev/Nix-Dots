@@ -25,6 +25,21 @@
       key = "~/.ssh/id_ed25519";
       signByDefault = true;
     };
+
+    extraConfig = {
+      url."git@github.com:".insteadOf = [
+        "https://github.com/"
+        "http://github.com/"
+      ];
+    };
+  };
+
+  programs.ssh = {
+    enable = true;
+    enableDefaultConfig = false;
+    matchBlocks."*" = {
+      addKeysToAgent = "yes";
+    };
   };
 
   home.sessionVariables = {
