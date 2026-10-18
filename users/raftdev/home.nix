@@ -19,14 +19,11 @@
       name = "RaftDev";
       email = "theraft08@gmail.com";
     };
-  };
 
-  programs.gh-dash.enable = true;
-  programs.gh = {
-    enable = true;
-    gitCredentialHelper.enable = true;
-    settings = {
-      git_protocol = "ssh";
+    signing = {
+      format = "ssh";
+      key = "~/.ssh/id_ed25519";
+      signByDefault = true;
     };
   };
 
