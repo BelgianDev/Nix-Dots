@@ -7,6 +7,7 @@
     ./app/browser/zen.nix
     ./app/editor/vscode.nix
     ./app/spotify.nix
+    ./app/yazi.nix
     ./app/mangohud.nix
     ./app/terminal/alacritty.nix
     ./app/chat/discord.nix
@@ -36,6 +37,7 @@
     };
 
     app = {
+      yazi.enable = true;
       spotify.enable = true;
       mangohud.enable = true;
 

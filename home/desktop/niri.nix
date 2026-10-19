@@ -58,8 +58,7 @@ in {
           Mod+Tab repeat=false { toggle-overview; }
           Mod+Return repeat=false { spawn "vicinae" "toggle"; }   
           Mod+Shift+S { screenshot; }
-          Print { screenshot-screen; }       
-
+ 
           // F- keys
           XF86AudioRaiseVolume  allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.0"; }
           XF86AudioLowerVolume  allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"; }
@@ -96,7 +95,7 @@ in {
           // Apps
           Mod+R repeat=false { spawn "alacritty"; }
           Mod+W repeat=false { spawn "zen-beta"; }
-          Mod+E repeat=false { spawn "nautilus"; }
+          Mod+E repeat=false { spawn "alacritty" "-e" "yazi"; }
         }
 
         output "DP-3" {
