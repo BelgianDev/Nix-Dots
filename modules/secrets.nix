@@ -7,12 +7,14 @@ let
 in {
   options.module.secrets = {
     wireguard = mkOption {
-      type = types.str;
+      type = types.nullOr types.str;
+      default = null;
       description = "Wireguard key path";
     };
 
     ssh-key = mkOption {
-      type = types.str;
+      type = types.nullOr types.str;
+      default = null;
       description = "Device SSH-key";
     };
   };
