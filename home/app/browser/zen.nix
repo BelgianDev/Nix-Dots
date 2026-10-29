@@ -53,7 +53,6 @@ in {
           istilldontcareaboutcookies
           buster-captcha-solver
           decentraleyes
-          return-youtube-dislikes
           indie-wiki-buddy
           clearurls
           dont-track-me-google1
