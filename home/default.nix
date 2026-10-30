@@ -15,6 +15,7 @@
     ./cli/bat.nix
     ./cli/btop.nix
     ./cli/cava.nix
+    ./cli/rbw.nix
     ./cli/rclone.nix
 
     ./desktop/gnome.nix
@@ -33,6 +34,7 @@
       btop.enable = lib.mkDefault true;
       cava.enable = lib.mkDefault true;
       bat.enable = lib.mkDefault true;
+      rbw.enable = lib.mkDefault true;
       rclone.enable = lib.mkDefault true;
     };
 

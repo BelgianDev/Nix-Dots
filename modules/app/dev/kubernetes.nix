@@ -14,6 +14,7 @@ in {
       kubectl
       fluxcd
       kustomize
+      hubble
     ];
   };
 }

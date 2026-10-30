@@ -16,6 +16,7 @@ in {
     environment.systemPackages = with pkgs; [
       seahorse
       gcr
+      pinentry-gnome3
     ];
   };
 }
