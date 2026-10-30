@@ -14,7 +14,7 @@ in {
       kubectl
       fluxcd
       kustomize
-      hubble
+      cilium-cli
     ];
   };
 }
