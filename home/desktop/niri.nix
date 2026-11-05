@@ -95,7 +95,7 @@ in {
           // Apps
           Mod+R repeat=false { spawn "alacritty"; }
           Mod+W repeat=false { spawn "zen-beta"; }
-          Mod+E repeat=false { spawn "alacritty" "-e" "yazi"; }
+          Mod+E repeat=false { spawn "nautilus"; }
         }
 
         output "DP-3" {
