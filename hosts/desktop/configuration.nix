@@ -23,11 +23,6 @@
     ssh-key = "desktop";
   };
 
-
-  module.service.wireguard = {
-    enable = false;
-  };
-
   services.flatpak.enable = true;
 
   # No Password for sudo, safe for desktop.
@@ -43,10 +38,6 @@
   networking.hostName = "Raft-Desktop"; 
   networking.firewall.enable = false; # Fuck the firewall
   networking.networkmanager.enable = true;
-
-  networking.extraHosts = ''
-    homepage.home.lab 192.168.0.22
-  '';
 
   module = {
     hardware = {
@@ -72,6 +63,11 @@
         steam.enable = true;
         switch.enable = true;
       };
+    };
+
+    service = {
+      wireguard.enable = false;
+      ssh-server.enable = true;
     };
   };
 

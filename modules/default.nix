@@ -63,6 +63,7 @@
     ./service/ntfy.nix
     ./service/dns.nix
     ./service/keyring.nix
+    ./service/ssh-server.nix
 
     ./tool/android.nix
   ];
@@ -163,6 +164,7 @@
     ntfy.enable = lib.mkDefault true;
     dns.enable = lib.mkDefault false;
     keyring.enable = lib.mkDefault true;
+    ssh-server.enable = lib.mkDefault false;
   };
   
   # Required Programs

@@ -31,9 +31,11 @@
     ssh-key = "laptop";
   };
 
-  module.service.wireguard = {
-    enable = true;
-    localAddress = "10.10.2.3/32";
+  module.service = {
+    wireguard = {
+      enable = true;
+      localAddress = "10.10.2.3/32";
+    };
   };
   
   # Apps
