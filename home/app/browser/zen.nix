@@ -64,9 +64,20 @@ in {
 
         search = {
           force = true;
-          default = "google";
+          default = "SearXNG";
 
           engines = {
+            "SearXNG" = {
+              urls = [
+                {
+                  template = "https://search.local.raftdev.com/search";
+                  params = [
+                    { name = "q"; value = "{searchTerms}"; }
+                  ];
+                }
+              ];
+              definedAliases = [ "@x" "@searx" ];
+            };
             mynixos = {
               name = "nix-pkgs";
               urls = [
