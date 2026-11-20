@@ -54,6 +54,10 @@
       blockbench.enable = true;
       audacity.enable = false;
     };
+
+    cad = {
+      kicad.enable = true;
+    };
   };
 
   module.kernel.boot.limine = {

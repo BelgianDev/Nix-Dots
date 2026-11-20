@@ -163,6 +163,15 @@ in {
             blur true
           }
         }
+
+        window-rule {
+          match app-id="kicad" is-floating=true
+          default-column-width { proportion 0.7; }
+          default-window-height { proportion 0.75; }
+          // Optional: prevents stubborn dialogs from shrinking smaller than this
+          min-width 900
+          min-height 650
+        }
       '';
     };
   };

@@ -37,7 +37,8 @@
     ./app/sftp/filezilla.nix
     ./app/virtualization/boxes.nix
     ./app/music/feishin.nix
-
+    ./app/cad/kicad.nix
+  
     ./hardware/amd.nix
     ./hardware/fingerprint.nix
     ./hardware/firmware.nix
@@ -122,6 +123,10 @@
       matrix.enable = lib.mkDefault true;
       teams.enable = lib.mkDefault true;
       whatsapp.enable = lib.mkDefault false;
+    };
+
+    cad = {
+      kicad.enable = lib.mkDefault false;
     };
   };
 
