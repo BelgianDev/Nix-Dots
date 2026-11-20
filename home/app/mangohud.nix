@@ -17,7 +17,7 @@ in {
       settings = {
         gpu_stats = true;
         gpu_temp = true;
-        gpu_voltage = true;
+        gpu_power = true;
         vram = true;
         
         cpu_stats = true;
